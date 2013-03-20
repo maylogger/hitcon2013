@@ -1,0 +1,43 @@
+@import "base";
+@import "compass";
+@import "normalize";
+
+body {
+  padding: 48px;
+  background: #eeeeef;
+}
+
+#{headings()} {
+  @include reset-box-model;
+}
+
+a {
+  @include link-colors(black);
+}
+
+.bigtitle {
+  font-family: "ltc-bodoni-175", serif;
+  @include adjust-font-size-to(100px, 4);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.slogan {
+  $font-size: 72px;
+  font-family: "Kocho", serif;
+  @include leader(1, $font-size);
+  @include trailer(1, $font-size);
+  @include adjust-font-size-to($font-size, 4);
+}
+
+p {
+  @include reset-box-model;
+  $font-size: 15px;
+  @include trailer(1, $font-size);
+  @include adjust-font-size-to($font-size, 1);
+}
+
+h3 {
+  $font-size: 15px;
+  @include adjust-font-size-to($font-size, 1);
+}
