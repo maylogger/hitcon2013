@@ -4,7 +4,10 @@
 
 body {
   padding: 48px;
-  background: #eeeeef;
+  background: #ff6;
+  @media (max-width: 640px) {
+    padding: 20px;
+  }
 }
 
 #{headings()} {
@@ -18,8 +21,12 @@ a {
 .bigtitle {
   font-family: "ltc-bodoni-175", serif;
   @include adjust-font-size-to(100px, 4);
+  @media (max-width: 640px) {
+    @include adjust-font-size-to(66px, 3);
+  }
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  font-weight: normal;
 }
 
 .slogan {
@@ -28,6 +35,10 @@ a {
   @include leader(1, $font-size);
   @include trailer(1, $font-size);
   @include adjust-font-size-to($font-size, 4);
+  font-weight: normal;
+  @media (max-width: 640px) {
+    @include leader(0, $font-size);
+  }
 }
 
 p {

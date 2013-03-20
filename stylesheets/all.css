@@ -110,15 +110,18 @@ textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
 /** Remove most spacing between table cells. */
 table { border-collapse: collapse; border-spacing: 0; }
 
-body { padding: 48px; background: #eeeeef; }
+body { padding: 48px; background: #ff6; }
+@media (max-width: 640px) { body { padding: 20px; } }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; border: 0; }
 
 a { color: black; }
 
-.bigtitle { font-family: "ltc-bodoni-175", serif; font-size: 6.25em; line-height: 0.96em; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+.bigtitle { font-family: "ltc-bodoni-175", serif; font-size: 6.25em; line-height: 0.96em; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; font-weight: normal; }
+@media (max-width: 640px) { .bigtitle { font-size: 4.125em; line-height: 1.09091em; } }
 
-.slogan { font-family: "Kocho", serif; margin-top: 0.33333em; margin-bottom: 0.33333em; font-size: 4.5em; line-height: 1.33333em; }
+.slogan { font-family: "Kocho", serif; margin-top: 0.33333em; margin-bottom: 0.33333em; font-size: 4.5em; line-height: 1.33333em; font-weight: normal; }
+@media (max-width: 640px) { .slogan { margin-top: 0em; } }
 
 p { margin: 0; padding: 0; border: 0; margin-bottom: 1.6em; font-size: 0.9375em; line-height: 1.6em; }
 
