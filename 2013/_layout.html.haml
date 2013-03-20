@@ -1,0 +1,22 @@
+!!! 5
+%html{ :lang => "zh-TW" }
+  %head
+
+    %meta{ :charset => "utf-8" }
+    %title HITCON 台灣駭客年會 2013
+
+    = render "/2013/partials/favicon"
+    = render "/2013/partials/viewport"
+    = render "/2013/partials/fb-og"
+
+    = render "/2013/partials/site-css"
+    = render "/2013/vender/html5shim"
+
+  %body
+    = yield
+
+    = render "/2013/vender/jquery-cdn"
+    = render "/2013/partials/site-js"
+    = render "/2013/vender/typekit.erb"
+    = render "/2013/vender/facebook.erb"
+    = livereload_js
