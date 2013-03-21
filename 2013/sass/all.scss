@@ -39,6 +39,12 @@ a {
   @media (max-width: 640px) {
     @include leader(0, $font-size);
   }
+  br {
+    display: none;
+    @media (max-width: 640px) {
+      display: inline;
+    }
+  }
 }
 
 p {
