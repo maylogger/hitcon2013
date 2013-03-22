@@ -2,11 +2,39 @@
 @import "compass";
 @import "normalize";
 
-body {
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: helvetica, arial, sans-serif;
+  background: #dee2d4;
+}
+
+.container {
+  min-height: 100%;
+  height: auto;
+  @include box-sizing(border-box);
   padding: 48px;
-  background: #ff6;
+  border: {
+    width: 0 115px 115px 0;
+    color: black #dc2d00;
+    style: solid;
+  }
   @media (max-width: 640px) {
     padding: 20px;
+  }
+  @media (min-width: 641px) {
+    border-width: 0 15em 15em 0;
+  }
+}
+
+.lined {
+  $border-width: 30px;
+  border-bottom: $border-width solid white;
+  padding-right: $border-width;
+  span {
+    position: relative;
+    top: .5em;
   }
 }
 
@@ -19,8 +47,10 @@ a {
 }
 
 .bigtitle {
+  margin-top: -0.5em;
+  $font-size: 100px;
   font-family: "ltc-bodoni-175", serif;
-  @include adjust-font-size-to(100px, 4);
+  @include adjust-font-size-to($font-size, 4);
   @media (max-width: 640px) {
     @include adjust-font-size-to(66px, 3);
   }
@@ -30,10 +60,12 @@ a {
 }
 
 .slogan {
+  @include nowrap;
+  color: #dc2d00;
   $font-size: 72px;
-  font-family: "Kocho", serif;
+  font-family: "ltc-bodoni-175", "Kocho", serif;
   @include leader(1, $font-size);
-  @include trailer(1, $font-size);
+  @include trailer(2, $font-size);
   @include adjust-font-size-to($font-size, 4);
   font-weight: normal;
   @media (max-width: 640px) {
