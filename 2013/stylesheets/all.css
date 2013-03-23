@@ -216,16 +216,20 @@ p {
 
 .big-title {
   margin-left: -.1em;
-  margin-top: 1.2em;
+  margin-top: 0.24em;
   font-family: hitcon-brand-bold;
-  font-size: 25em;
-  line-height: 0.24em;
+  font-size: 12.5em;
+  line-height: 0.12em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 .big-title-name {
+  display: block;
   color: #dce0d2;
 }
 
 .big-title-year {
+  display: block;
   color: rgba(0, 0, 0, 0.45);
 }

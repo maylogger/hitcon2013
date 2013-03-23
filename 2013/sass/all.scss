@@ -24,14 +24,18 @@ p {
 
 .big-title {
   margin-left: -.1em;
-  $font-size: 400px;
-  @include leader(20, $font-size);
+  $font-size: 200px;
+  @include leader(2, $font-size);
   font-family: hitcon-brand-bold;
-  @include adjust-font-size-to($font-size,4);
+  @include adjust-font-size-to($font-size,1);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 .big-title-name {
+  display: block;
   color: #dce0d2;
 }
 .big-title-year {
+  display: block;
   color: rgba(black,.45);
 }
