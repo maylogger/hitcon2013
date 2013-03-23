@@ -93,7 +93,7 @@ h3 {
   $font-size: 16px;
   @include adjust-font-size-to($font-size, 1);
   &:before {
-    content: "## ";
+    content: "### ";
   }
 }
 

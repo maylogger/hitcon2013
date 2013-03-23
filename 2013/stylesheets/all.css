@@ -298,7 +298,7 @@ h3 {
   line-height: 1.5em;
 }
 h3:before {
-  content: "## ";
+  content: "### ";
 }
 
 a {
