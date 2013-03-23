@@ -8,6 +8,9 @@ html, body {
   overflow-x: hidden;
   font-family: helvetica, arial, sans-serif;
   background: #dee2d4;
+  @media (max-width: 640px) {
+    height: auto;
+  }
 }
 
 .container {
@@ -17,14 +20,14 @@ html, body {
   padding: 48px;
   border: {
     width: 0 115px 115px 0;
-    color: black #dc2d00;
+    color: black #a0080b;
     style: solid;
   }
   @media (max-width: 640px) {
     padding: 20px;
   }
   @media (min-width: 641px) {
-    border-width: 0 15em 15em 0;
+    border-width: 0 0 12em 12em;
   }
 }
 
@@ -40,10 +43,7 @@ html, body {
 
 #{headings()} {
   @include reset-box-model;
-}
-
-a {
-  @include link-colors(black);
+  font-weight: normal;
 }
 
 .bigtitle {
@@ -61,7 +61,7 @@ a {
 
 .slogan {
   @include nowrap;
-  color: #dc2d00;
+  color: #a0080b;
   $font-size: 72px;
   font-family: "ltc-bodoni-175", "Kocho", serif;
   @include leader(1, $font-size);
@@ -80,13 +80,41 @@ a {
 }
 
 p {
+  font-family: monospace;
   @include reset-box-model;
-  $font-size: 15px;
+  $font-size: 16px;
   @include trailer(1, $font-size);
   @include adjust-font-size-to($font-size, 1);
+  word-break: break-all;
 }
 
 h3 {
-  $font-size: 15px;
+  font-family: monospace;
+  $font-size: 16px;
   @include adjust-font-size-to($font-size, 1);
+  &:before {
+    content: "## ";
+  }
+}
+
+a {
+  @include unstyled-link;
+  @include link-colors(black);
+  cursor: pointer;
+  color: #a00;
+  &:before {
+    content: "[";
+    color: black;
+  }
+  &:after {
+    content: "](" attr(href) ")";
+    color: black;
+  }
+  &:hover {
+    color: black;
+    text-decoration: underline;
+    &:before, &:after {
+      color: black;
+    }
+  }
 }
