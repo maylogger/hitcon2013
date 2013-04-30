@@ -1,0 +1,25 @@
+.main-menu {
+  background: $dark-blue;
+  .title {
+    padding: 0 $base-line-height / 2;
+    font-size: 15px;
+    line-height: $base-line-height * 2 - 1px;
+    border-bottom: 1px solid $blue;
+    position: relative;
+    z-index: 999;
+  }
+  .menu-item {
+    list-style: none;
+    a {
+      @include unstyled-link;
+      @include link-colors($white, $red);
+      padding: 0 $base-line-height / 2;
+      line-height: $base-line-height * 2 - 1px;
+      border-bottom: 1px solid $blue;
+      display: block;
+      &:hover {
+        background: black;
+      }
+    }
+  }  
+}

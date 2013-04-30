@@ -1,41 +1,30 @@
-@import "compass";
-@import "normalize";
-@import "susy";
+$base-line-height: 25px;
+$base-font-size: 16px;
+$legacy-support-for-ie: false;
+$relative-font-sizing: false;
+$grid-background-baseline-height: $base-line-height;
+
+$red:          #b6132d;
+$blue:         #2f4768;
+$dark-blue:    #091324;
+$green:        #208e7f;
+$yellow:       #d1cc80;
+$white:        #d1dffe;
 
 body {
-  background: #f2540b;
+  background-color: $dark-blue;
+  color: $white;
 }
 
-#{headings()} {
-  @include reset-box-model;
-  font-weight: normal;
-}
+@import "compass";
+@import "susy";
 
-a {
-  @include link-colors(black);
-}
+@import "normalize";
+@include normalize;
+@include establish-baseline;
 
-p {
-  @include reset-box-model;
-  $font-size: 15px;
-  @include trailer(1, $font-size);
-  @include adjust-font-size-to($font-size, 1);
-}
+@import "layout";
+@import "typography";
 
-.big-title {
-  margin-left: -.1em;
-  $font-size: 200px;
-  @include leader(2, $font-size);
-  font-family: hitcon-brand-bold;
-  @include adjust-font-size-to($font-size,1);
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-}
-.big-title-name {
-  display: block;
-  color: #dce0d2;
-}
-.big-title-year {
-  display: block;
-  color: rgba(black,.45);
-}
+@import "menu";
+@import "header";

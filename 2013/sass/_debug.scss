@@ -1,0 +1,18 @@
+.main-menu,
+.main-content {
+  background: rgba(white,.1);
+}
+$grid-background-column-color: rgba(white,.1);
+$grid-background-baseline-color: rgba(white,.1);
+body {
+  @include baseline-grid-background;
+}
+.page {
+  @include susy-grid-background;
+  @include at-breakpoint($ipad) {
+    @include susy-grid-background;
+  }
+  @include at-breakpoint($desktop) {
+    @include susy-grid-background;
+  }
+}

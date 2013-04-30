@@ -3,7 +3,7 @@
   %head
 
     %meta{ :charset => "utf-8" }
-    %title 台灣駭客年會 HITCON 2013
+    %title= data["site-title"]
 
     = render "/2013/partials/favicon"
     = render "/2013/partials/viewport"
@@ -14,10 +14,25 @@
 
   %body
     .page
-      = yield
+      %nav.main-menu
+        %h2.title HITCON 2013 Menu
+        %ul
+          %li.menu-item= link_to( "News", "#" )
+          %li.menu-item= link_to( "Agenda", "#" )
+          %li.menu-item= link_to( "Wargame", "#" )
+          %li.menu-item= link_to( "Location", "#" )
+          %li.menu-item= link_to( "Registration", "#" )
+          %li.menu-item= link_to( "Sponsor", "#" )
+      .main-content
+        .header
+          %a.menu-button
+            .line
+            .line
+            .line
+          %h1.title HITCON 2013
+        = yield
 
     = render "/2013/vender/jquery-cdn"
     = render "/2013/partials/site-js"
-    = render "/2013/vender/typekit.erb"
-    = render "/2013/vender/facebook.erb"
+
     = livereload_js
