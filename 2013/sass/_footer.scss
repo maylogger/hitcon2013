@@ -2,12 +2,19 @@
   clear: both;
   @include leader(1);
   text-align: center;
+  @include leading-border(1px);
+  border-color: $blue;
   ul {
     list-style: none;
   }
   .bottom-menu {
-    @include leading-border(1px);
-    border-color: $blue;
+    width: 70%;
+    @include at-breakpoint($desktop) {
+      width: 55%;
+    }
+    margin: 0 auto;
+    @include columns(10em 3);
+    @include column-gap(25px);
     a {
       @include link-colors( darken($red, 10%) );
       @include adjust-font-size-to(16px);

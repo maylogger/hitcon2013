@@ -1,5 +1,5 @@
 body {
-  background: black url('/2013/images/bg-grid.png?1367402494') repeat-y center -1px;
+  background: black url('/2013/images/bg-grid.png?1367434057') repeat-y center -1px;
   color: #d1dffe;
 }
 
@@ -312,7 +312,7 @@ html {
 }
 
 .main-content {
-  background: url('/2013/images/bg-map.gif?1367421611') no-repeat center top;
+  background: url('/2013/images/bg-map.gif?1367434057') no-repeat center top;
   min-height: 600px;
   -webkit-transition: margin 0.3s;
   -moz-transition: margin 0.3s;
@@ -407,7 +407,8 @@ html {
 .topic {
   background: rgba(0, 0, 0, 0.75);
   border: 3px double #2f4768;
-  margin: -3px auto;
+  margin: -3px auto 22px;
+  overflow: hidden;
   width: 80%;
 }
 .topic br {
@@ -443,6 +444,9 @@ html {
   }
 }
 
+.whats-hitcon {
+  padding-bottom: 25px;
+}
 .whats-hitcon .title {
   text-align: center;
 }
@@ -484,6 +488,14 @@ html {
 .agenda .title {
   text-align: center;
 }
+.agenda .btn {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+}
+.agenda .content {
+  padding-bottom: 75px;
+}
 @media (min-width: 720px) {
   .agenda {
     width: 74.54545%;
@@ -503,7 +515,6 @@ html {
     margin-left: 0%;
   }
   .agenda .content {
-    text-align: justify;
     width: 49.39759%;
     float: left;
     margin-right: 1.20482%;
@@ -511,11 +522,6 @@ html {
   .agenda .content:last-child {
     float: right;
     margin-right: 0;
-  }
-  .agenda .content:last-child li {
-    font-size: 13px;
-    line-height: 18px;
-    margin-bottom: 6px;
   }
 }
 
@@ -526,7 +532,7 @@ html {
 }
 
 .waiting {
-  background: url('/2013/images/noise.gif?1367426829') center top;
+  background: url('/2013/images/noise.gif?1367434057') center top;
   min-height: 250px;
 }
 .waiting .title {
@@ -583,7 +589,7 @@ hr {
   border: none;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  padding-bottom: 49px;
+  padding-bottom: 24px;
   border-color: #2f4768;
   margin-bottom: 25px;
 }
@@ -610,11 +616,16 @@ hr {
   line-height: 25px;
   margin-bottom: 25px;
 }
-.section p:last-child {
-  margin-bottom: 0;
-}
 .section ol {
   margin-bottom: 25px;
+}
+.section a {
+  color: #d1cc80;
+}
+
+.fb-like {
+  height: 75px !important;
+  overflow: hidden;
 }
 
 .btn {
@@ -683,7 +694,7 @@ hr {
   color: #d1cc80;
 }
 .main-menu .menu-item a:hover {
-  background: rgba(209, 223, 254, 0.3);
+  background: rgba(209, 223, 254, 0.1);
   border: 1px solid #d1dffe;
   border-width: 1px 0;
   margin: -1px 0;
@@ -759,12 +770,12 @@ hr {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/2013/images/logo-small.png?1367394376');
+  background-image: url('/2013/images/logo-small.png?1367434057');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 200px;
   height: 50px;
-  background-image: none, url('/2013/images/logo-small.svg?1367394294');
+  background-image: none, url('/2013/images/logo-small.svg?1367434057');
   background-repeat: no-repeat;
   -webkit-background-size: contain;
   -moz-background-size: contain;
@@ -795,10 +806,10 @@ hr {
   width: 70%;
   height: 1px;
   background: #d1dffe;
-  margin-bottom: 15%;
+  margin-bottom: 8px;
 }
 .header .menu-button .line:first-child {
-  margin-top: 35%;
+  margin-top: 15px;
 }
 @media (min-width: 960px) {
   .header .menu-button {
@@ -852,7 +863,7 @@ hr {
   .hero {
     display: block;
     height: 600px;
-    background: url('/2013/images/hero.png?1367310581') no-repeat center top;
+    background: url('/2013/images/hero.png?1367434057') no-repeat center top;
   }
   .hero .slogan {
     display: none;
@@ -880,12 +891,12 @@ hr {
     text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/2013/images/logo-large.png?1367394392');
+    background-image: url('/2013/images/logo-large.png?1367434057');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     width: 600px;
     height: 100px;
-    background-image: none, url('/2013/images/logo-large.svg?1367394304');
+    background-image: none, url('/2013/images/logo-large.svg?1367434057');
     background-repeat: no-repeat;
     -webkit-background-size: contain;
     -moz-background-size: contain;
@@ -906,7 +917,7 @@ hr {
     display: block;
     height: 199px;
     padding-top: 51px;
-    background: url('/2013/images/hero.png?1367310581') no-repeat center bottom;
+    background: url('/2013/images/hero.png?1367434057') no-repeat center bottom;
   }
   .hero-page .slogan {
     display: none;
@@ -931,12 +942,12 @@ hr {
     text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/2013/images/logo-large.png?1367394392');
+    background-image: url('/2013/images/logo-large.png?1367434057');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     width: 600px;
     height: 100px;
-    background-image: none, url('/2013/images/logo-large.svg?1367394304');
+    background-image: none, url('/2013/images/logo-large.svg?1367434057');
     background-repeat: no-repeat;
     -webkit-background-size: contain;
     -moz-background-size: contain;
@@ -950,16 +961,33 @@ hr {
   clear: both;
   margin-top: 25px;
   text-align: center;
+  border-top-style: solid;
+  border-top-width: 1px;
+  padding-top: 24px;
+  border-color: #2f4768;
   padding-bottom: 50px;
 }
 .footer ul {
   list-style: none;
 }
 .footer .bottom-menu {
-  border-top-style: solid;
-  border-top-width: 1px;
-  padding-top: 24px;
-  border-color: #2f4768;
+  width: 70%;
+  margin: 0 auto;
+  -webkit-columns: 10em 3;
+  -moz-columns: 10em 3;
+  -ms-columns: 10em 3;
+  -o-columns: 10em 3;
+  columns: 10em 3;
+  -webkit-column-gap: 25px;
+  -moz-column-gap: 25px;
+  -ms-column-gap: 25px;
+  -o-column-gap: 25px;
+  column-gap: 25px;
+}
+@media (min-width: 960px) {
+  .footer .bottom-menu {
+    width: 55%;
+  }
 }
 .footer .bottom-menu a {
   color: #880e22;
@@ -976,12 +1004,12 @@ hr {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/2013/images/slogan.png?1367401360');
+  background-image: url('/2013/images/slogan.png?1367434057');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 300px;
   height: 25px;
-  background-image: none, url('/2013/images/slogan.svg?1367401260');
+  background-image: none, url('/2013/images/slogan.svg?1367434057');
   background-repeat: no-repeat;
   -webkit-background-size: contain;
   -moz-background-size: contain;

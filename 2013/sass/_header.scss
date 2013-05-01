@@ -31,9 +31,9 @@
       width: 70%;
       height: 1px;
       background: $white;
-      margin-bottom: 15%;
+      margin-bottom: 8px;
       &:first-child {
-        margin-top: 35%;
+        margin-top: 15px;
       }
     }
     @include at-breakpoint($desktop) {

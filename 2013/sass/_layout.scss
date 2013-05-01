@@ -91,7 +91,8 @@ $side   : $total-columns - $anchor;
 .topic {
   background: rgba(black,.75);
   border: 3px double $blue;
-  margin: -3px auto;
+  margin: -3px auto ($base-line-height - 3px);
+  overflow: hidden;
   br {
     display: none;
   }
@@ -124,6 +125,7 @@ $side   : $total-columns - $anchor;
   .title {
     text-align: center;
   }
+  @include padding-trailer(1);
   @include at-breakpoint($ipad) {
     @include span-columns(6);
     @include push(1);
@@ -146,6 +148,14 @@ $side   : $total-columns - $anchor;
   .title {
     text-align: center;
   }
+  .btn {
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+  }
+  .content {
+    @include padding-trailer(3);
+  }
   @include at-breakpoint($ipad) {
     @include span-columns(6);
     @include push(1);
@@ -157,13 +167,9 @@ $side   : $total-columns - $anchor;
     @include reset-columns;
     @include push(0);
     .content {
-      text-align: justify;
       @include span-columns(6);
       @include nth-omega();
-      &:last-child li {
-        @include adjust-font-size-to(13px, 3/4);
-        @include trailer(1/4);
-      }
+      
     }
   }
 }

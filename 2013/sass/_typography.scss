@@ -33,7 +33,7 @@ hr {
   display: block;
   clear: both;
   border: none;
-  @include trailing-border(1px, 2);
+  @include trailing-border(1px);
   border-color: $blue;
   @include trailer(1);
 }
@@ -51,11 +51,14 @@ hr {
     @include adjust-font-size-to(16px);
     @include trailer(1);
     &:last-child {
-      margin-bottom: 0;
+      // margin-bottom: 0;
     }
   }
   ol {
     @include trailer(1);
+  }
+  a {
+    @include link-colors($yellow);
   }
 }
 
