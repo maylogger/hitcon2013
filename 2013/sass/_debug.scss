@@ -1,10 +1,6 @@
-.main-menu,
-.main-content {
-  background: rgba(white,.1);
-}
-$grid-background-column-color: rgba(white,.1);
-$grid-background-baseline-color: rgba(white,.1);
-body {
+$grid-background-column-color: rgba($blue,.25);
+$grid-background-baseline-color: rgba($blue,.2);
+.page {
   @include baseline-grid-background;
 }
 .page {

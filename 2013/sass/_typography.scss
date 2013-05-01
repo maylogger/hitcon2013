@@ -18,7 +18,7 @@ body {
 }
 
 a {
-  @include link-colors(rgba(black,.7), black);
+  @include link-colors($white, $green);
   @include hover-link;
 }
 
@@ -27,3 +27,35 @@ img {
   max-width: 100%;
   margin-bottom: 1em;
 }
+
+hr {
+  margin: 0;
+  display: block;
+  clear: both;
+  border: none;
+  @include trailing-border(1px, 2);
+  border-color: $blue;
+  @include trailer(1);
+}
+
+.section {
+  @include pie-clearfix;
+  @include box-sizing(border-box);
+  padding: $base-line-height;
+  #{headings()} {
+    @include adjust-font-size-to(24px, 1);
+    @include trailer(1);
+    text-align: center;
+  }
+  p {
+    @include adjust-font-size-to(16px);
+    @include trailer(1);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  ol {
+    @include trailer(1);
+  }
+}
+

@@ -13,25 +13,28 @@
     = render "/2013/vender/html5shim"
 
   %body
+    = yield :hero
     .page
       %nav.main-menu
-        %h2.title HITCON 2013 Menu
+        %h2.title Main Navigation
         %ul
-          %li.menu-item= link_to( "News", "#" )
-          %li.menu-item= link_to( "Agenda", "#" )
-          %li.menu-item= link_to( "Wargame", "#" )
-          %li.menu-item= link_to( "Location", "#" )
-          %li.menu-item= link_to( "Registration", "#" )
-          %li.menu-item= link_to( "Sponsor", "#" )
+          %li.menu-item= link_to( "Home", "/" )
+          %li.menu-item= link_to( "News", "http://blog.hitcon.org/" )
+          %li.menu-item= link_to( "Call for Paper", "/2013/agenda/" )
+          %li.menu-item= link_to( "Wargame", "/2013/wargame/" )
+          %li.menu-item= link_to( "Location", "/2013/location/" )
+          %li.menu-item= link_to( "Registration", "/2013/registration/" )
+          %li.menu-item= link_to( "Sponsor", "/2013/sponsor/" )
       .main-content
         .header
           %a.menu-button
             .line
             .line
             .line
-          %h1.title HITCON 2013
+          %h1.title
+            = link_to "HITCON 2013", "/2013/"
         = yield
-
+        = render "/2013/footer"
     = render "/2013/vender/jquery-cdn"
     = render "/2013/partials/site-js"
 

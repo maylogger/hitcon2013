@@ -1,25 +1,69 @@
 .main-menu {
-  background: $dark-blue;
   .title {
     padding: 0 $base-line-height / 2;
-    font-size: 15px;
+    font-size: 12px;
     line-height: $base-line-height * 2 - 1px;
-    border-bottom: 1px solid $blue;
+    border-bottom: 1px solid $yellow;
     position: relative;
-    z-index: 999;
+    z-index: 99;
+    color: $red;
   }
   .menu-item {
     list-style: none;
+    border-bottom: 1px solid $blue;
     a {
-      @include unstyled-link;
-      @include link-colors($white, $red);
+      display: block;
       padding: 0 $base-line-height / 2;
       line-height: $base-line-height * 2 - 1px;
-      border-bottom: 1px solid $blue;
-      display: block;
+      @include transition(background-color .3s .3s);
+      @include unstyled-link;
+      @include link-colors($white, $yellow);
       &:hover {
-        background: black;
+        background: rgba($white,.3);
+        border: 1px solid $white;
+        border-width: 1px 0;
+        margin: -1px 0;
+        position: relative;
+        z-index: 100;
       }
     }
-  }  
+  }
+  @include at-breakpoint($desktop) {
+    @include leader(1);
+    @include trailer(1);
+    .title {
+      display: none;
+    }
+    ul {
+      @include pie-clearfix;
+    }
+    .menu-item {
+      // @include isolate-grid(2);
+      @include span-columns(2);
+      @include nth-omega;
+      line-height: $base-line-height - 1px;
+      text-align: center;
+      position: relative;
+      top: - $base-line-height / 2;
+      a {
+        position: relative;
+        top: $base-line-height / 2;
+        display: inline;
+        font-size: 15px;
+        line-height: $base-line-height - 1px;
+        background: black;
+        @include link-colors($red);
+        @include transition( background-color .3s );
+        &:hover {
+          background: black;
+          color: $yellow;
+          text-shadow: 0 0 5px rgba($yellow, 1);
+          border: none;
+        }
+      }
+      &:first-child {
+        display: none;
+      }
+    }
+  }
 }

@@ -1,12 +1,12 @@
-$total-columns    : 8;
+$total-columns    : 6;
 $column-width     : 5em;
 $gutter-width     : 1em;
 $grid-padding     : 0;
 
-$ipad-columns     : 10;
-$ipad-break       : 768px;
+$ipad-columns     : 8;
+$ipad-break       : 720px;
 $ipad: $ipad-break $ipad-columns;
-$desktop-columns  : 16;
+$desktop-columns  : 12;
 $desktop-break    : 960px;
 $desktop: $desktop-break $desktop-columns;
 
@@ -27,17 +27,20 @@ $anchor : 2;
 $side   : $total-columns - $anchor;
 .page {
   @include container;
+  @include transition(max-width .3s);
 }
 .main-menu {
-  @include transition(margin, .3s);
-  @include span-columns($side); // 4
+  @include transition(margin .3s);
+  @include span-columns($side);
   margin-left: -100%;
   .show-menu & { margin-left: 0; }
 }
 
 .main-content {
-  @include transition(margin, .3s);
-  @include span-columns($total-columns omega);
+  background: image-url("bg-map.gif") no-repeat center top;
+  min-height: 600px;
+  @include transition(margin .3s);
+  @include span-columns($total-columns omega);  
   margin-right: 0;
   .show-menu & { margin-right: - ceil(space($side)); }
 }
@@ -45,6 +48,7 @@ $side   : $total-columns - $anchor;
 @include at-breakpoint($ipad) {
   $side : 3;
   $anchor: $ipad-columns - $side;
+  $column-width: 6em;
   .page {
     @include container;
   }
@@ -67,12 +71,121 @@ $side   : $total-columns - $anchor;
     @include container;
   }
   .main-menu {
-    @include span-columns($side);
+    @include transition(none);
+    @include reset-columns;
     margin-left: 0;
   }
   .main-content {
-    @include span-columns($main omega);
+    background: none;
+    @include transition(none);
+    @include reset-columns;
     margin-right: 0;
     .show-menu & { margin-right: 0; }
+  }
+}
+
+.row {
+  @include pie-clearfix;
+}
+
+.topic {
+  background: rgba(black,.75);
+  border: 3px double $blue;
+  margin: -3px auto;
+  br {
+    display: none;
+  }
+  .title {
+    text-align: center;
+  }
+  width: 80%;
+  @include at-breakpoint($ipad) {
+    width: auto;
+    text-align: center;
+    @include span-columns(6);
+    @include push(1);
+    br {
+      display: block;
+    }
+    span {
+      display: none;
+    }
+  }
+  @include at-breakpoint($desktop) {
+    @include span-columns(8);
+    @include push(2);
+    @include padding-leader(1);
+    @include padding-trailer(1);
+  }
+}
+
+
+.whats-hitcon {
+  .title {
+    text-align: center;
+  }
+  @include at-breakpoint($ipad) {
+    @include span-columns(6);
+    @include push(1);
+  }
+  @include at-breakpoint($desktop) {
+    @include span-columns(10);
+    @include push(1);
+    .content {
+      @include columns(15em 3);
+      @include column-gap(25px)
+    }
+  }
+}
+
+.agenda {
+  background: rgba(black,.75);
+  ol {
+    margin: 0 1.3em;
+  }
+  .title {
+    text-align: center;
+  }
+  @include at-breakpoint($ipad) {
+    @include span-columns(6);
+    @include push(1);
+    ol {
+      margin: 0 3em;
+    }
+  }
+  @include at-breakpoint($desktop) {
+    @include reset-columns;
+    @include push(0);
+    .content {
+      text-align: justify;
+      @include span-columns(6);
+      @include nth-omega();
+      &:last-child li {
+        @include adjust-font-size-to(13px, 3/4);
+        @include trailer(1/4);
+      }
+    }
+  }
+}
+
+.call-for-paper {
+  .btn {
+    display: block;
+    margin: 0 auto;
+    width: 175px;
+  }
+}
+
+.waiting {
+  background: image-url("noise.gif") center top;
+  min-height: 250px;
+  .title {
+    @include leader(2);
+    @include adjust-font-size-to(32px);
+    text-align: center;
+  }
+  .content p {
+    @include adjust-font-size-to(16px);
+    text-align: center;
   }
 }
