@@ -1,120 +1,36 @@
-@import "base";
+$base-line-height: 25px;
+$base-font-size: 16px;
+$legacy-support-for-ie: false;
+$relative-font-sizing: false;
+$grid-background-baseline-height: $base-line-height;
+
+$red:          #b6132d;
+$blue:         #2f4768;
+$dark-blue:    #091324;
+$green:        #208e7f;
+$yellow:       #d1cc80;
+$white:        #d1dffe;
+
+body {
+  background: black image-url("bg-grid.png") repeat-y center -1px;
+  color: $white;
+}
+
 @import "compass";
+@import "susy";
+
 @import "normalize";
+@include normalize;
+@include establish-baseline;
 
-html, body {
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  font-family: helvetica, arial, sans-serif;
-  background: #dee2d4;
-  @media (max-width: 640px) {
-    height: auto;
-  }
-}
+@import "layout";
+@import "typography";
+@import "replace-text-with-svg";
 
-.container {
-  min-height: 100%;
-  height: auto;
-  @include box-sizing(border-box);
-  padding: 48px;
-  border: {
-    width: 0 115px 115px 0;
-    color: black #a0080b;
-    style: solid;
-  }
-  @media (max-width: 640px) {
-    padding: 20px;
-  }
-  @media (min-width: 641px) {
-    border-width: 0 0 12em 12em;
-  }
-}
+@import "fb";
+@import "btn";
+@import "menu";
+@import "header";
+@import "hero";
+@import "footer";
 
-.lined {
-  $border-width: 30px;
-  border-bottom: $border-width solid white;
-  padding-right: $border-width;
-  span {
-    position: relative;
-    top: .5em;
-  }
-}
-
-#{headings()} {
-  @include reset-box-model;
-  font-weight: normal;
-}
-
-.bigtitle {
-  margin-top: -0.5em;
-  $font-size: 100px;
-  font-family: "ltc-bodoni-175", serif;
-  @include adjust-font-size-to($font-size, 4);
-  @media (max-width: 640px) {
-    @include adjust-font-size-to(66px, 3);
-  }
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  font-weight: normal;
-}
-
-.slogan {
-  @include nowrap;
-  color: #a0080b;
-  $font-size: 72px;
-  font-family: "ltc-bodoni-175", "Kocho", serif;
-  @include leader(1, $font-size);
-  @include trailer(2, $font-size);
-  @include adjust-font-size-to($font-size, 4);
-  font-weight: normal;
-  @media (max-width: 640px) {
-    @include leader(0, $font-size);
-  }
-  br {
-    display: none;
-    @media (max-width: 640px) {
-      display: inline;
-    }
-  }
-}
-
-p {
-  font-family: monospace;
-  @include reset-box-model;
-  $font-size: 16px;
-  @include trailer(1, $font-size);
-  @include adjust-font-size-to($font-size, 1);
-  word-break: break-all;
-}
-
-h3 {
-  font-family: monospace;
-  $font-size: 16px;
-  @include adjust-font-size-to($font-size, 1);
-  &:before {
-    content: "### ";
-  }
-}
-
-a {
-  @include unstyled-link;
-  @include link-colors(black);
-  cursor: pointer;
-  color: #a00;
-  &:before {
-    content: "[";
-    color: black;
-  }
-  &:after {
-    content: "](" attr(href) ")";
-    color: black;
-  }
-  &:hover {
-    color: black;
-    text-decoration: underline;
-    &:before, &:after {
-      color: black;
-    }
-  }
-}
