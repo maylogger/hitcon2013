@@ -1,0 +1,70 @@
+.header {
+  position: relative;
+  @include trailer(2);
+  background: rgba(black,.5);
+  .title {
+    @include adjust-font-size-to(24px, 2);
+    text-align: center;
+    // background: rgba($dark-blue, .3);
+    border-bottom: 1px solid $green;
+    height: $base-line-height * 2 - 1px;
+    overflow: hidden;
+    a {
+      display: block;
+      @include link-colors($red);
+      @include replace-text-with-svg("logo-small");
+      margin: 0 auto;
+    }
+  }
+  .menu-button {
+    @include transition(background-color .3s .5s);
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $base-line-height * 2;
+    height: $base-line-height * 2 - 1px;
+    .line {
+      @include transition(transform .3s);
+      margin: auto;
+      width: 70%;
+      height: 1px;
+      background: $white;
+      margin-bottom: 8px;
+      &:first-child {
+        margin-top: 15px;
+      }
+    }
+    @include at-breakpoint($desktop) {
+      display: none;
+    }
+  }
+  @include at-breakpoint($desktop) {
+    display: none;
+  }
+}
+
+.show-menu .header .menu-button {
+  background-color: $red;
+  .line {
+    @include reset-box-model;
+    &:first-child {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -35%;
+      @include transform( rotate(45deg) );
+    }
+    &:last-child {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -35%;
+      @include transform( rotate(-45deg) );
+    }
+    &:nth-child(2n) {
+      display: none;
+    }
+  }
+}

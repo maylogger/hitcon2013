@@ -1,0 +1,200 @@
+$total-columns    : 6;
+$column-width     : 5em;
+$gutter-width     : 1em;
+$grid-padding     : 0;
+
+$ipad-columns     : 8;
+$ipad-break       : 720px;
+$ipad: $ipad-break $ipad-columns;
+$desktop-columns  : 12;
+$desktop-break    : 960px;
+$desktop: $desktop-break $desktop-columns;
+
+$container-style: magic;
+$container-width: false;
+
+.page {
+  overflow: hidden;
+}
+
+// debug
+@import "debug";
+
+// $anchor variable to control how many columns of 
+// the main section remain visible while side-sections are 
+// displayed.
+$anchor : 2;
+$side   : $total-columns - $anchor;
+.page {
+  @include container;
+  @include transition(max-width .3s);
+}
+.main-menu {
+  @include transition(margin .3s);
+  @include span-columns($side);
+  margin-left: -100%;
+  .show-menu & { margin-left: 0; }
+}
+
+.main-content {
+  background: image-url("bg-map.gif") no-repeat center top;
+  min-height: 600px;
+  @include transition(margin .3s);
+  @include span-columns($total-columns omega);  
+  margin-right: 0;
+  .show-menu & { margin-right: - ceil(space($side)); }
+}
+
+@include at-breakpoint($ipad) {
+  $side : 3;
+  $anchor: $ipad-columns - $side;
+  $column-width: 6em;
+  .page {
+    @include container;
+  }
+  .main-menu {
+    @include span-columns($side);
+    margin-left: -100%;
+  }
+  .main-content {
+    @include span-columns($ipad-columns omega);
+    margin-right: 0;
+    .show-menu & { margin-right: - (space($side)) - .1; }
+  }
+}
+
+@include at-breakpoint($desktop) {
+  $side : 3;
+  $main: $desktop-columns - $side;
+  $grid-padding: $gutter-width;
+  .page {
+    @include container;
+  }
+  .main-menu {
+    @include transition(none);
+    @include reset-columns;
+    margin-left: 0;
+  }
+  .main-content {
+    background: none;
+    @include transition(none);
+    @include reset-columns;
+    margin-right: 0;
+    .show-menu & { margin-right: 0; }
+  }
+}
+
+.row {
+  @include pie-clearfix;
+}
+
+
+// this year
+.topic {
+  background: rgba(black,.75);
+  border: 3px double $blue;
+  margin: -3px auto ($base-line-height - 3px);
+  overflow: hidden;
+  br {
+    display: none;
+  }
+  .title {
+    text-align: center;
+  }
+  width: 80%;
+  @include at-breakpoint($ipad) {
+    overflow: visible;
+    width: auto;
+    text-align: center;
+    @include span-columns(6);
+    @include push(1);
+    br {
+      display: block;
+    }
+    span {
+      display: none;
+    }
+  }
+  @include at-breakpoint($desktop) {
+    @include span-columns(8);
+    @include push(2);
+    @include padding-leader(1);
+    @include padding-trailer(1);
+  }
+}
+
+
+.whats-hitcon {
+  .title {
+    text-align: center;
+  }
+  @include padding-trailer(1);
+  @include at-breakpoint($ipad) {
+    @include span-columns(6);
+    @include push(1);
+  }
+  @include at-breakpoint($desktop) {
+    @include span-columns(10);
+    @include push(1);
+    .content {
+      @include columns(15em 3);
+      @include column-gap(25px)
+    }
+  }
+}
+
+.agenda {
+  background: rgba(black,.75);
+  ol {
+    margin: 0 1.3em;
+  }
+  .title {
+    text-align: center;
+  }
+  .btn {
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+  }
+  .content {
+    @include padding-trailer(3);
+  }
+  @include at-breakpoint($ipad) {
+    @include span-columns(6);
+    @include push(1);
+    ol {
+      margin: 0 3em;
+    }
+  }
+  @include at-breakpoint($desktop) {
+    @include reset-columns;
+    @include push(0);
+    .content {
+      @include span-columns(6);
+      @include nth-omega();
+      
+    }
+  }
+}
+
+.call-for-paper {
+  .btn {
+    display: block;
+    margin: 0 auto;
+    width: 175px;
+  }
+}
+
+.waiting {
+  background: image-url("noise.gif") center top;
+  min-height: 250px;
+  .title {
+    @include leader(2);
+    @include adjust-font-size-to(32px);
+    text-align: center;
+  }
+  .content p {
+    @include adjust-font-size-to(16px);
+    text-align: center;
+  }
+}

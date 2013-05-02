@@ -1,0 +1,38 @@
+.footer {
+  clear: both;
+  @include leader(1);
+  text-align: center;
+  @include leading-border(1px);
+  border-color: $blue;
+  ul {
+    list-style: none;
+  }
+  .bottom-menu {
+    width: 70%;
+    @include at-breakpoint($desktop) {
+      width: 55%;
+    }
+    margin: 0 auto;
+    @include columns(10em 3);
+    @include column-gap(25px);
+    a {
+      @include link-colors( darken($red, 10%) );
+      @include adjust-font-size-to(16px);
+    }
+  }
+  .credit {
+    a {
+      @include link-colors( darken($yellow, 30%) );
+      @include adjust-font-size-to(13px);
+    }
+  }
+  .slogan {
+    margin: $base-line-height auto;
+    @include replace-text-with-svg("slogan");
+    @include at-breakpoint($ipad) {
+      width: 600px;
+      height: 50px;
+    }
+  }
+  padding-bottom: 50px;
+}

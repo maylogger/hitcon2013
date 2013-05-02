@@ -1,0 +1,14 @@
+$grid-background-column-color: rgba($blue,.25);
+$grid-background-baseline-color: rgba($blue,.2);
+.page {
+  @include baseline-grid-background;
+}
+.page {
+  @include susy-grid-background;
+  @include at-breakpoint($ipad) {
+    @include susy-grid-background;
+  }
+  @include at-breakpoint($desktop) {
+    @include susy-grid-background;
+  }
+}

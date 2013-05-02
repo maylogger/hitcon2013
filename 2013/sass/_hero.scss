@@ -1,0 +1,64 @@
+.hero {
+  display: none;
+  @include at-breakpoint($desktop) {
+    display: block;
+    height: 600px;
+    background: image-url("hero.png") no-repeat center top;
+    .slogan {
+      display: none;
+    }
+    a {
+      position: absolute;
+      top: 401px;
+      width: 100%;
+      @include transition(.3s);
+      &:hover {
+        background: rgba(black,.7);
+      }
+    }
+    hgroup {
+      .title {
+        background: black;
+        @include replace-text-with-svg("logo-large");
+        margin: 0 auto;
+      }
+      width: 600px - 2px;
+      height: 100px - 1px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+  }
+}
+
+.hero-page {
+  display: none;
+  a {
+    display: block;
+  }
+  @include at-breakpoint($desktop) {
+    display: block;
+    height: 200px - 1px;
+    padding-top: 51px;
+    background: image-url("hero.png") no-repeat center bottom;
+    .slogan {
+      display: none;
+    }
+    a {
+      @include transition(.3s);
+      &:hover {
+        background: rgba(black,.7);
+      }
+    }
+    hgroup {
+      .title {
+        background: black;
+        @include replace-text-with-svg("logo-large");
+        margin: 0 auto;
+      }
+      width: 600px - 2px;
+      height: 100px - 1px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+  }  
+}

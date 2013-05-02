@@ -3,7 +3,7 @@
   %head
 
     %meta{ :charset => "utf-8" }
-    %title 台灣駭客年會 HITCON 2013
+    %title= data["site-title"]
 
     = render "/2013/partials/favicon"
     = render "/2013/partials/viewport"
@@ -13,10 +13,29 @@
     = render "/2013/vender/html5shim"
 
   %body
-    = yield
-
+    = yield :hero
+    .page
+      %nav.main-menu
+        %h2.title Main Navigation
+        %ul
+          %li.menu-item= link_to( "Home", "/" )
+          %li.menu-item= link_to( "News", "http://blog.hitcon.org/" )
+          %li.menu-item= link_to( "Call for Paper", "/2013/agenda/" )
+          %li.menu-item= link_to( "Wargame", "/2013/wargame/" )
+          %li.menu-item= link_to( "Location", "/2013/location/" )
+          %li.menu-item= link_to( "Registration", "/2013/registration/" )
+          %li.menu-item= link_to( "Sponsor", "/2013/sponsor/" )
+      .main-content
+        .header
+          %a.menu-button
+            .line
+            .line
+            .line
+          %h1.title
+            = link_to "HITCON 2013", "/2013/"
+        = yield
+        = render "/2013/footer"
     = render "/2013/vender/jquery-cdn"
     = render "/2013/partials/site-js"
-    = render "/2013/vender/typekit.erb"
     = render "/2013/vender/facebook.erb"
-    = livereload_js
+    = livereload_js unless ENV["RACK_ENV"] == "production"
