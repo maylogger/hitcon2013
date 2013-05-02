@@ -1,5 +1,6 @@
 !!! 5
 %html{ :lang => "zh-TW" }
+
   %head
 
     %meta{ :charset => "utf-8" }
@@ -11,6 +12,8 @@
 
     = render "/2013/partials/site-css"
     = render "/2013/vender/html5shim"
+
+    = render "/2013/kmt.erb"
 
   %body
     = yield :hero

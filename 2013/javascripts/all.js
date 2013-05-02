@@ -11,3 +11,5 @@ $(function() {
     return false;
   });
 });
+
+console.log('看三小!? 這麼愛看人家內褲請參加 http://hitcon.org/2013/wargame/')
