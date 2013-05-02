@@ -88,6 +88,8 @@ $side   : $total-columns - $anchor;
   @include pie-clearfix;
 }
 
+
+// this year
 .topic {
   background: rgba(black,.75);
   border: 3px double $blue;
@@ -101,6 +103,7 @@ $side   : $total-columns - $anchor;
   }
   width: 80%;
   @include at-breakpoint($ipad) {
+    overflow: visible;
     width: auto;
     text-align: center;
     @include span-columns(6);

@@ -419,6 +419,7 @@ html {
 }
 @media (min-width: 720px) {
   .topic {
+    overflow: visible;
     width: auto;
     text-align: center;
     width: 74.54545%;
@@ -625,7 +626,6 @@ hr {
 
 .fb-like {
   height: 75px !important;
-  overflow: hidden;
 }
 
 .btn {
