@@ -47,6 +47,20 @@ hr {
     @include trailer(1);
     text-align: center;
   }
+  h3 {
+    @include adjust-font-size-to(20px);
+    text-align: left;
+  }
+  h4, h5 {
+    @include adjust-font-size-to(13px);
+    text-align: left;
+    font-weight: bold;
+    margin: 0;
+    color: $yellow;
+  }
+  h5 {
+    color: $green;
+  }
   p {
     @include adjust-font-size-to(16px);
     @include trailer(1);
@@ -54,6 +68,7 @@ hr {
       // margin-bottom: 0;
     }
   }
+  ul,
   ol {
     @include trailer(1);
   }

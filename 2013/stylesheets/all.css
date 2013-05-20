@@ -130,7 +130,7 @@ figure {
 }
 
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -417,6 +417,9 @@ html {
 .topic .title {
   text-align: center;
 }
+.topic hr {
+  margin-bottom: 49px;
+}
 @media (min-width: 720px) {
   .topic {
     overflow: visible;
@@ -477,52 +480,80 @@ html {
     -ms-column-gap: 25px;
     -o-column-gap: 25px;
     column-gap: 25px;
+    margin-bottom: 75px;
+  }
+  .whats-hitcon .content:last-child {
+    margin-bottom: 0px;
+  }
+  .whats-hitcon .content p {
+    margin-bottom: 12px;
+  }
+  .whats-hitcon .content.en p {
+    font-size: 13px;
+    line-height: 18px;
   }
 }
 
-.agenda {
+.agenda, .registration, .wargame {
   background: rgba(0, 0, 0, 0.75);
 }
-.agenda ol {
+.agenda ol, .registration ol, .wargame ol {
   margin: 0 1.3em;
 }
-.agenda .title {
+.agenda .title, .registration .title, .wargame .title {
   text-align: center;
 }
-.agenda .btn {
+.agenda .btn, .registration .btn, .wargame .btn {
   display: block;
   width: 150px;
-  margin: 0 auto;
+  margin: 0 auto 25px;
 }
-.agenda .content {
+.agenda .content, .registration .content, .wargame .content {
   padding-bottom: 75px;
 }
+.agenda .content .title-wrapper, .registration .content .title-wrapper, .wargame .content .title-wrapper {
+  border-bottom: 1px solid #1f2f45;
+  margin-bottom: 36.5px;
+}
+.agenda .content .title-wrapper .title, .registration .content .title-wrapper .title, .wargame .content .title-wrapper .title {
+  margin-bottom: -12.5px;
+}
+.agenda .content .title-wrapper .title .span, .registration .content .title-wrapper .title .span, .wargame .content .title-wrapper .title .span {
+  padding: 0 12.5px;
+  display: inline;
+  background: black;
+}
+.agenda ul, .registration ul, .wargame ul, .agenda ol, .registration ol, .wargame ol {
+  margin: 0 3em;
+  list-style: square;
+}
 @media (min-width: 720px) {
-  .agenda {
+  .agenda, .registration, .wargame {
     width: 74.54545%;
     float: left;
     margin-right: 1.81818%;
     margin-left: 12.72727%;
   }
-  .agenda ol {
-    margin: 0 3em;
-  }
 }
 @media (min-width: 960px) {
-  .agenda {
+  .agenda, .registration, .wargame {
     float: none;
     width: auto;
     margin-right: auto;
     margin-left: 0%;
   }
-  .agenda .content {
+  .agenda .content, .registration .content, .wargame .content {
     width: 49.39759%;
     float: left;
     margin-right: 1.20482%;
   }
-  .agenda .content:last-child {
+  .agenda .content:last-child, .registration .content:last-child, .wargame .content:last-child {
     float: right;
     margin-right: 0;
+  }
+  .agenda .content.en, .registration .content.en, .wargame .content.en {
+    font-size: 13px;
+    line-height: 25px;
   }
 }
 
@@ -542,7 +573,7 @@ html {
   line-height: 50px;
   text-align: center;
 }
-.waiting .content p {
+.waiting p {
   font-size: 16px;
   line-height: 25px;
   text-align: center;
@@ -612,11 +643,28 @@ hr {
   margin-bottom: 25px;
   text-align: center;
 }
+.section h3 {
+  font-size: 20px;
+  line-height: 25px;
+  text-align: left;
+}
+.section h4, .section h5 {
+  font-size: 13px;
+  line-height: 25px;
+  text-align: left;
+  font-weight: bold;
+  margin: 0;
+  color: #d1cc80;
+}
+.section h5 {
+  color: #208e7f;
+}
 .section p {
   font-size: 16px;
   line-height: 25px;
   margin-bottom: 25px;
 }
+.section ul,
 .section ol {
   margin-bottom: 25px;
 }
@@ -690,10 +738,8 @@ hr {
 .main-menu .menu-item a:active, .main-menu .menu-item a:focus {
   outline: none;
 }
-.main-menu .menu-item a:hover {
+.main-menu .menu-item a:active {
   color: #d1cc80;
-}
-.main-menu .menu-item a:hover {
   background: rgba(209, 223, 254, 0.1);
   border: 1px solid #d1dffe;
   border-width: 1px 0;
@@ -722,10 +768,18 @@ hr {
     text-align: center;
     position: relative;
     top: -12.5px;
+    -webkit-transition: border-color 0.3s;
+    -webkit-transition-delay: 0.3s;
+    -moz-transition: border-color 0.3s 0.3s;
+    -o-transition: border-color 0.3s 0.3s;
+    transition: border-color 0.3s 0.3s;
   }
   .main-menu .menu-item:last-child {
     float: right;
     margin-right: 0;
+  }
+  .main-menu .menu-item:hover {
+    border-color: #d1dffe;
   }
   .main-menu .menu-item a {
     position: relative;

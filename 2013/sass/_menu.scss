@@ -17,8 +17,9 @@
       line-height: $base-line-height * 2 - 1px;
       @include transition(background-color .3s .3s);
       @include unstyled-link;
-      @include link-colors($white, $yellow);
-      &:hover {
+      @include link-colors($white);
+      &:active {
+        color: $yellow;
         background: rgba($white,.1);
         border: 1px solid $white;
         border-width: 1px 0;
@@ -45,6 +46,10 @@
       text-align: center;
       position: relative;
       top: - $base-line-height / 2;
+      @include transition(border-color .3s .3s);
+      &:hover {
+        border-color: $white;
+      }
       a {
         position: relative;
         top: $base-line-height / 2;
