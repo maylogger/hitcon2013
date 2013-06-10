@@ -67,7 +67,7 @@
   @include box-sizing(border-box);
   padding: 1em .5em .3em;
   -webkit-font-smoothing: subpixel-antialiased;
-  @include background( linear-gradient(transparent, rgba(white, .7) 50% ) );
+  @include background( linear-gradient(rgba(white, .01), rgba(white, .7) 50% ) );
   @include at-breakpoint($ipad) {
     padding: 1em;
   }

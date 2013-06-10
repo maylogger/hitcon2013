@@ -788,11 +788,11 @@ hr {
   box-sizing: border-box;
   padding: 1em .5em .3em;
   -webkit-font-smoothing: subpixel-antialiased;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, transparent), color-stop(50%, rgba(255, 255, 255, 0.7)));
-  background: -webkit-linear-gradient(transparent, rgba(255, 255, 255, 0.7) 50%);
-  background: -moz-linear-gradient(transparent, rgba(255, 255, 255, 0.7) 50%);
-  background: -o-linear-gradient(transparent, rgba(255, 255, 255, 0.7) 50%);
-  background: linear-gradient(transparent, rgba(255, 255, 255, 0.7) 50%);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.01)), color-stop(50%, rgba(255, 255, 255, 0.7)));
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.7) 50%);
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.7) 50%);
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.7) 50%);
+  background: linear-gradient(rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.7) 50%);
 }
 @media (min-width: 720px) {
   .block-content {
