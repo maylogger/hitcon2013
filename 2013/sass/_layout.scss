@@ -157,7 +157,8 @@ $side   : $total-columns - $anchor;
 }
 
 %col2 {
-  background: rgba(black,.75);
+  background: rgba(black,.7);
+
   ol {
     margin: 0 1.3em;
   }
@@ -171,7 +172,8 @@ $side   : $total-columns - $anchor;
     margin: 0 auto $base-line-height;
   }
   .content {
-    @include padding-trailer(3);
+    
+    @include padding-trailer(1);
     .title-wrapper {
       border-bottom: 1px solid darken($blue, 10%);
       margin-bottom: $base-line-height - 1px + $base-line-height / 2;
@@ -184,10 +186,24 @@ $side   : $total-columns - $anchor;
         }
       }
     }
+    @include at-breakpoint($desktop) {
+      @include box-sizing(border-box);
+      padding: 0 $base-line-height/2 ;
+    }
   }
   ul, ol {
-    margin: 0 3em;
+    @include at-breakpoint($ipad) {
+      margin: 0 3em;
+    }
+    margin: 0 1em;
     list-style: square;
+    ul {
+      @include adjust-font-size-to(.9em, .7);
+      opacity: .7;
+    }
+  }
+  ol {
+    list-style: decimal;
   }
   @include at-breakpoint($ipad) {
     @include span-columns(6);
@@ -196,6 +212,7 @@ $side   : $total-columns - $anchor;
   @include at-breakpoint($desktop) {
     @include reset-columns;
     @include push(0);
+    background: rgba(black,.3);
     .content {
       @include span-columns(6);
       @include nth-omega();
@@ -215,6 +232,15 @@ $side   : $total-columns - $anchor;
 }
 
 .wargame {
+  @extend %col2;
+}
+
+.sponsor {
+  background: rgba(black,.7);
+  padding: 3em;
+}
+
+.location {
   @extend %col2;
 }
 

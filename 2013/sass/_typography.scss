@@ -62,11 +62,7 @@ hr {
     color: $green;
   }
   p {
-    @include adjust-font-size-to(16px);
     @include trailer(1);
-    &:last-child {
-      // margin-bottom: 0;
-    }
   }
   ul,
   ol {

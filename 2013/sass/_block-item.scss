@@ -1,0 +1,198 @@
+.row {
+  clear: both;
+  @include pie-clearfix;
+}
+
+.block-content {
+  margin-left: -.1em;
+  .title {
+    display: inline;
+    @include at-breakpoint($ipad) {
+      display: block;
+    }
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.3;
+    &:last-child {
+      @include trailer(0);
+    }
+  }
+  p {
+    color: #999;
+    display: inline;
+    @include at-breakpoint($ipad) {
+      display: block;
+    }
+    font-size: 12px;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    margin: 0;
+  }
+}
+
+// block layout
+.block {
+  display: block;
+  @include pie-clearfix;
+  @include reset-box-model;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  @include link-colors(white, white);
+  background-color: rgba(black,.03);
+  opacity: .9;
+  // &:hover {
+  //   opacity: 1;
+  // }
+  .section & {
+    @include link-colors(black);
+  }
+  @include at-breakpoint($ipad) {
+    border-radius: 5px;
+  }
+}
+.block-image {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  @include background-size(contain);
+}
+.block-content {
+  position: absolute;
+  bottom: 0;
+  width: 101%;
+  @include box-sizing(border-box);
+  padding: 1em .5em .3em;
+  -webkit-font-smoothing: subpixel-antialiased;
+  @include background( linear-gradient(transparent, rgba(white, .7) 50% ) );
+  @include at-breakpoint($ipad) {
+    padding: 1em;
+  }
+}
+.block {
+  margin-bottom: gutter($total-columns);
+  padding-top: 50%;
+}
+.big-block {
+  clear: both;
+  @include pie-clearfix;
+  padding-top: 60%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  @include background-size(contain);
+  position: relative;
+}
+
+.badge {
+  $badge: $blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $badge;
+  z-index: 99;
+  padding: 0 10px;
+  color: darken(white, 10%);
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 24px;
+  text-shadow: 0 -1px 0 rgba(black,.5);
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: block;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 12px 12px 0 0;
+    border-color: $badge transparent transparent transparent;
+  }
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    display: block;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 12px 0 0 12px;
+    border-color: transparent transparent transparent $badge;
+  }
+  em {
+    font-style: normal;
+    color: white;
+    text-shadow: 0 0 3px $yellow;
+  }
+  @include at-breakpoint($ipad) {
+    top: 1em;
+    left: -7px;
+    padding-left: 17px;
+    $drop-shadow: drop-shadow(7px 3px 1px rgba($blue,.3));
+    -webkit-filter: $drop-shadow;
+    filter: $drop-shadow;
+
+  }
+}
+
+.sponsor-group {
+  clear: both;
+  @include pie-clearfix;
+  margin-bottom: $base-line-height;
+}
+
+.empty {
+  @include reset-box-model;
+}
+
+@include at-breakpoint($ipad) {
+
+  .block-content {
+    margin: 0;
+    padding: .7em;
+    text-align: left;
+    .title {
+      @include baseline-font-size(16px, 3/4);
+      @include trailer(0);
+    }
+    .sub-title {
+      @include baseline-font-size(12px, 2/3);
+      @include ellipsis;
+    }
+    p {
+      @include baseline-font-size(12px, 2/3);
+      @include ellipsis;
+    }
+  }
+  // grid layout
+
+  $context: 12;
+  @for $width from 1 through 12 {
+    @for $height from 1 through 12 {
+      .block#{$width}#{$height} {
+        @include span-columns($width, $context);
+        padding-top: columns($height, $context);
+      }
+    }
+  }
+
+  .block {
+    margin-bottom: gutter($context);
+    @include nth-omega;
+  }
+
+  .big-block {
+    padding-top: 50%;
+  }
+
+}
+
+@include at-breakpoint($desktop) {
+  .big-block {
+    padding-top: 40%;
+  }  
+}
