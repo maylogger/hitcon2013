@@ -124,6 +124,34 @@ $side   : $total-columns - $anchor;
     @include padding-leader(1);
     @include padding-trailer(1);
   }
+  .date {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    @include adjust-font-size-to(22px, 1.5);
+    &.en {
+      @include adjust-font-size-to(22px, 1.5);
+    }
+    @include at-breakpoint($ipad) {
+      text-align: center;
+    }
+  }
+  .stage,
+  .address {
+    text-align: left;
+    @include adjust-font-size-to(15px, 1);
+    margin: 0;
+    padding: 0;
+    &.en {
+      @include adjust-font-size-to(13px, 1);
+    }
+    @include at-breakpoint($ipad) {
+      text-align: center;
+    }
+  }
+  .address {
+    @include trailer(1);
+  }
 }
 
 

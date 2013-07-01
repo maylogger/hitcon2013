@@ -447,6 +447,44 @@ html {
     padding-bottom: 25px;
   }
 }
+.topic .date {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  line-height: 37px;
+}
+.topic .date.en {
+  font-size: 22px;
+  line-height: 37px;
+}
+@media (min-width: 720px) {
+  .topic .date {
+    text-align: center;
+  }
+}
+.topic .stage,
+.topic .address {
+  text-align: left;
+  font-size: 15px;
+  line-height: 25px;
+  margin: 0;
+  padding: 0;
+}
+.topic .stage.en,
+.topic .address.en {
+  font-size: 13px;
+  line-height: 25px;
+}
+@media (min-width: 720px) {
+  .topic .stage,
+  .topic .address {
+    text-align: center;
+  }
+}
+.topic .address {
+  margin-bottom: 25px;
+}
 
 .whats-hitcon {
   padding-bottom: 25px;
