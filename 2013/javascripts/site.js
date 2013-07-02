@@ -6,6 +6,7 @@ window[ns] = function() {
 
 window[ns].prototype = {
   setup: function() {
+    xx('site.setup();');
     this.init();
     this.prepare();
     this.animate();
@@ -21,6 +22,8 @@ window[ns].prototype = {
     $.ajaxSetup({
       cache: true
     });
+
+    xx('site.init();')
   },
 
   prepare: function() {
@@ -47,6 +50,7 @@ window[ns].prototype = {
 
       this.heros.push( new Hero({ type: type, wrapper: wrapper, index: index, globalIndex: this.globalIndex[type] }) );
     }.bind(this));
+    xx('site.prepare();')
   },
 
   animate: function() {

@@ -13,7 +13,7 @@ window[ns].prototype = {
       y: 18.5 * r
     };
 
-    this.arrowRate = 2*r;
+    this.arrowRate = 2.5*r;
     this.arrowPoints = [
       { x: 0 * this.arrowRate, y: 0 * this.arrowRate },
       { x: 2 * this.arrowRate, y: 0 * this.arrowRate },
@@ -25,6 +25,7 @@ window[ns].prototype = {
     this.y         = this.startPoint.y;
     this.completeX = this.width - (25/2) * r;
     this.complete  = false;
+    this.ready     = false;
     this.length    = this.completeX - this.x;
 
     this.progressStyle   = "rgb(170, 0, 50)";
@@ -43,29 +44,40 @@ window[ns].prototype = {
   },
 
   update: function() {
-    if( this.complete ) return;
-    if( this.is_complete() ) {
-      this.complete = true;
+    if( this.ready ) return;
+
+    if( this.is_ready() ) {
+      this.ready = true;
+      this.x     = this.completeX;
+
       setTimeout(function(){
         this.reset();
       }.bind(this), 2000);
+
+      setTimeout(function(){
+        this.complete = true;
+      }.bind(this), 700);
       return ;
     }
-    if( Math.random() < .1 ) this.x += Math.Random( 0, 30 );
+    if( Math.random() < .1 ) this.x += Math.Random( 0, 4 );
   },
 
       reset: function() {
         this.x        = this.startPoint.x;
         this.complete = false;
+        this.ready    = false;
       },
 
   draw: function() {
     this.drawNumber();
     if( this.complete ) {
+        xx('a');
+
       this.drawCompeleMessage();
     } else {
-      this.drawProcessing();
       this.drawWholeBar();
+      this.drawProcessing();
+      this.drawSteps();
       this.drawArrow();
     }
   },
@@ -73,10 +85,10 @@ window[ns].prototype = {
       drawArrow: function() {
         this.ctx.beginPath();
         this.ctx.fillStyle = '#50ae8b';
-        this.ctx.moveTo( this.arrowPoints[0].x , this.arrowPoints[0].y );
-        this.ctx.lineTo( this.arrowPoints[1].x , this.arrowPoints[1].y );
-        this.ctx.lineTo( this.arrowPoints[2].x , this.arrowPoints[2].y );
-        this.ctx.lineTo( this.arrowPoints[0].x , this.arrowPoints[0].y );
+        this.ctx.moveTo( this.arrowPoints[0].x + this.x - this.arrowRate, this.arrowPoints[0].y + this.y - 2*this.arrowRate );
+        this.ctx.lineTo( this.arrowPoints[1].x + this.x - this.arrowRate, this.arrowPoints[1].y + this.y - 2*this.arrowRate );
+        this.ctx.lineTo( this.arrowPoints[2].x + this.x - this.arrowRate, this.arrowPoints[2].y + this.y - 2*this.arrowRate );
+        this.ctx.lineTo( this.arrowPoints[0].x + this.x - this.arrowRate, this.arrowPoints[0].y + this.y - 2*this.arrowRate );
         this.ctx.fill();
       },
 
@@ -104,7 +116,7 @@ window[ns].prototype = {
         this.ctx.drawLine({
           color: this.progressStyle,
           lineWidth: 2*r,
-          from: [ this.startPoint.x + 2, this.y ],
+          from: [ this.startPoint.x, this.y ],
           to: [ this.x + 1 * r, this.y ]
         })
       },
@@ -117,11 +129,14 @@ window[ns].prototype = {
           from: [ this.startPoint.x, this.y ],
           to: [ this.completeX, this.y ]
         });
+        this.ctx.stroke();
+      },
 
-
+      drawSteps: function() {
         // // head and tail
         this.ctx.drawLines({
           color: this.intervalStyle,
+          lineWidth: .5 * r,
           pathes: [
             { 
               from: [ this.startPoint.x - .5 * r, this.y - 4.5 * r ], 
@@ -143,9 +158,9 @@ window[ns].prototype = {
         this.ctx.stroke();
       },
 
-  is_complete: function() {
+  is_ready: function() {
     return this.x >= this.completeX - 25/2*r;
-  },
+  }
 };
 
 })(jQuery);

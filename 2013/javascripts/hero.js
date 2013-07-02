@@ -6,6 +6,8 @@ window[ns] = function( options ) {
   this.init();
   this.prepare();
   this.resize();
+
+  xx(this.data);
 };
 
 window[ns].prototype = {
@@ -39,7 +41,7 @@ window[ns].prototype = {
 
     if( this.globalIndex != 0 ) return;
 
-    $.getScript( 'javascripts/hero-' + this.type + '.js', function(data, textStatus, jqxhr) {
+    $.getScript( '/2013/javascripts/hero-' + this.type + '.js', function(data, textStatus, jqxhr) {
       var i = site.callbacks[this.type].length;
       while( i-- ) site.callbacks[this.type][i]();
     }.bind(this));
