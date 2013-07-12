@@ -532,62 +532,62 @@ html {
   }
 }
 
-.agenda, .registration, .wargame, .location {
+.registration, .wargame, .location, .agenda {
   background: rgba(0, 0, 0, 0.7);
 }
-.agenda ol, .registration ol, .wargame ol, .location ol {
+.registration ol, .wargame ol, .location ol, .agenda ol {
   margin: 0 1.3em;
 }
-.agenda .title, .registration .title, .wargame .title, .location .title {
+.registration .title, .wargame .title, .location .title, .agenda .title {
   text-align: center;
 }
-.agenda .btn, .registration .btn, .wargame .btn, .location .btn {
+.registration .btn, .wargame .btn, .location .btn, .agenda .btn {
   display: block;
   width: 150px;
   margin: 0 auto 25px;
 }
-.agenda .content, .registration .content, .wargame .content, .location .content {
+.registration .content, .wargame .content, .location .content, .agenda .content {
   padding-bottom: 25px;
 }
-.agenda .content .title-wrapper, .registration .content .title-wrapper, .wargame .content .title-wrapper, .location .content .title-wrapper {
+.registration .content .title-wrapper, .wargame .content .title-wrapper, .location .content .title-wrapper, .agenda .content .title-wrapper {
   border-bottom: 1px solid #1f2f45;
   margin-bottom: 36.5px;
 }
-.agenda .content .title-wrapper .title, .registration .content .title-wrapper .title, .wargame .content .title-wrapper .title, .location .content .title-wrapper .title {
+.registration .content .title-wrapper .title, .wargame .content .title-wrapper .title, .location .content .title-wrapper .title, .agenda .content .title-wrapper .title {
   margin-bottom: -12.5px;
 }
-.agenda .content .title-wrapper .title .span, .registration .content .title-wrapper .title .span, .wargame .content .title-wrapper .title .span, .location .content .title-wrapper .title .span {
+.registration .content .title-wrapper .title .span, .wargame .content .title-wrapper .title .span, .location .content .title-wrapper .title .span, .agenda .content .title-wrapper .title .span {
   padding: 0 12.5px;
   display: inline;
   background: black;
 }
 @media (min-width: 960px) {
-  .agenda .content, .registration .content, .wargame .content, .location .content {
+  .registration .content, .wargame .content, .location .content, .agenda .content {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 12.5px;
   }
 }
-.agenda ul, .registration ul, .wargame ul, .location ul, .agenda ol, .registration ol, .wargame ol, .location ol {
+.registration ul, .wargame ul, .location ul, .agenda ul, .registration ol, .wargame ol, .location ol, .agenda ol {
   margin: 0 1em;
   list-style: square;
 }
 @media (min-width: 720px) {
-  .agenda ul, .registration ul, .wargame ul, .location ul, .agenda ol, .registration ol, .wargame ol, .location ol {
+  .registration ul, .wargame ul, .location ul, .agenda ul, .registration ol, .wargame ol, .location ol, .agenda ol {
     margin: 0 3em;
   }
 }
-.agenda ul ul, .registration ul ul, .wargame ul ul, .location ul ul, .agenda ol ul, .registration ol ul, .wargame ol ul, .location ol ul {
+.registration ul ul, .wargame ul ul, .location ul ul, .agenda ul ul, .registration ol ul, .wargame ol ul, .location ol ul, .agenda ol ul {
   font-size: 0.9em;
   line-height: 17px;
   opacity: .7;
 }
-.agenda ol, .registration ol, .wargame ol, .location ol {
+.registration ol, .wargame ol, .location ol, .agenda ol {
   list-style: decimal;
 }
 @media (min-width: 720px) {
-  .agenda, .registration, .wargame, .location {
+  .registration, .wargame, .location, .agenda {
     width: 74.54545%;
     float: left;
     margin-right: 1.81818%;
@@ -595,23 +595,23 @@ html {
   }
 }
 @media (min-width: 960px) {
-  .agenda, .registration, .wargame, .location {
+  .registration, .wargame, .location, .agenda {
     float: none;
     width: auto;
     margin-right: auto;
     margin-left: 0%;
     background: rgba(0, 0, 0, 0.3);
   }
-  .agenda .content, .registration .content, .wargame .content, .location .content {
+  .registration .content, .wargame .content, .location .content, .agenda .content {
     width: 49.39759%;
     float: left;
     margin-right: 1.20482%;
   }
-  .agenda .content:last-child, .registration .content:last-child, .wargame .content:last-child, .location .content:last-child {
+  .registration .content:last-child, .wargame .content:last-child, .location .content:last-child, .agenda .content:last-child {
     float: right;
     margin-right: 0;
   }
-  .agenda .content.en, .registration .content.en, .wargame .content.en, .location .content.en {
+  .registration .content.en, .wargame .content.en, .location .content.en, .agenda .content.en {
     font-size: 13px;
     line-height: 25px;
   }
@@ -2392,6 +2392,164 @@ hr {
     width: 600px;
     height: 50px;
   }
+}
+
+.agenda-table {
+  margin-bottom: 75px;
+}
+
+.date-block p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 24px;
+  line-height: 25px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  padding-bottom: 24px;
+  margin-bottom: 25px;
+  border-color: #b6132d;
+  text-align: center;
+}
+
+.time-block {
+  font-size: 12px;
+  line-height: 25px;
+  background: #2f4768;
+  padding: 0 .5em;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.session {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 12px;
+  line-height: 16px;
+}
+.session + .session {
+  border-top-style: solid;
+  border-top-width: 1px;
+  padding-top: 15px;
+  border-color: #2f4768;
+}
+@media (min-width: 960px) {
+  .session + .session {
+    border-top: 0;
+  }
+  .session[class*="room-r"] {
+    width: 32.53012%;
+    float: left;
+    margin-right: 1.20482%;
+    padding-top: 0px;
+  }
+  .session[class*="room-r"]:last-child {
+    float: right;
+    margin-right: 0;
+  }
+  .session.room-all {
+    padding-top: 0px;
+    text-align: center;
+    float: none;
+    width: auto;
+    margin-right: auto;
+  }
+  .session.room-all .title {
+    background: transparent;
+    text-align: center;
+  }
+  .session.room-all .time {
+    margin: 0;
+  }
+}
+.session .title {
+  text-align: left;
+  margin-top: 6px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  background: #091324;
+  margin-bottom: 6px;
+}
+.session .speaker {
+  display: inline-block;
+  margin-right: 1em;
+}
+.session .time {
+  display: inline-block;
+  margin-right: 1em;
+}
+.session .room {
+  font-size: 12px;
+  line-height: 17px;
+  display: inline-block;
+  padding: 1px .7em 0;
+  background: #2f4768;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+.session .room.r0 {
+  background: #b6132d;
+}
+.session .room.r1 {
+  background: #878231;
+}
+.session .room.r2 {
+  background: #208e7f;
+}
+.session:before {
+  font-size: 12px;
+  line-height: 17px;
+  display: inline-block;
+  padding: 1px .7em 0;
+  background: #2f4768;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+.session.room-r0:before {
+  content: "R0";
+  background: #b6132d;
+}
+.session.room-r1:before {
+  content: "R1";
+  background: #878231;
+}
+.session.room-r2:before {
+  content: "R2";
+  background: #208e7f;
+}
+.session.room-rest {
+  text-align: center;
+  float: none;
+  width: auto;
+  margin-right: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background: #1a283a;
+}
+.session.room-rest .title {
+  background: transparent;
+  text-align: center;
+}
+@media (min-width: 960px) {
+  .session.room-rest .title {
+    display: inline-block;
+    margin-right: .5em;
+  }
+}
+.session.room-rest .time {
+  margin: 0;
+}
+@media (min-width: 960px) {
+  .session.room-rest .time {
+    display: inline-block;
+  }
+}
+.session.long-time {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 [class*="obj-"] {

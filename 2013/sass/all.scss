@@ -9,6 +9,7 @@ $blue:         #2f4768;
 $dark-blue:    #091324;
 $green:        #208e7f;
 $yellow:       #d1cc80;
+$dark-yellow:  darken(#d1cc80, 30%);
 $white:        #d1dffe;
 
 body {
@@ -35,5 +36,6 @@ body {
 @import "header";
 @import "hero";
 @import "footer";
+@import "agenda";
 
 @import "canvas";
