@@ -2394,6 +2394,132 @@ hr {
   }
 }
 
+.hidden-note {
+  display: none;
+}
+
+.session-box {
+  margin: 0 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+@media (min-width: 30em) {
+  .session-box {
+    margin: 0 auto;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    width: 25em;
+  }
+}
+@media (min-width: 960px) {
+  .session-box {
+    width: 40em;
+  }
+}
+.session-box .title {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  padding-bottom: 22px;
+  border-style: double;
+  border-color: #2f4768;
+  margin-bottom: 12px;
+}
+.session-box .speaker {
+  font-size: 16px;
+  line-height: 25px;
+}
+.session-box .country {
+  font-size: 12px;
+  line-height: 25px;
+}
+.session-box .company {
+  font-size: 12px;
+  line-height: 25px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  padding-bottom: 11px;
+  border-color: #2f4768;
+  margin-bottom: 25px;
+}
+.session-box .speaker-note {
+  font-size: 12px;
+  line-height: 16px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  padding-bottom: 11px;
+  border-color: #2f4768;
+  margin-bottom: 25px;
+}
+.session-box .speaker-note:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.session-box .speaker-note .zh:before {
+  content: "講者簡介:";
+  display: block;
+  color: #d1cc80;
+}
+.session-box .speaker-note .en:before {
+  content: "Speaker:";
+  display: block;
+  color: #d1cc80;
+}
+.session-box .session-note {
+  font-size: 12px;
+  line-height: 16px;
+}
+.session-box .session-note:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.session-box .session-note .zh:before {
+  content: "議程簡介:";
+  display: block;
+  color: #d1cc80;
+}
+.session-box .session-note .en:before {
+  content: "Session:";
+  display: block;
+  color: #d1cc80;
+}
+@media (min-width: 960px) {
+  .session-box .zh {
+    width: 49.39759%;
+    float: left;
+    margin-right: 1.20482%;
+  }
+  .session-box .en {
+    width: 49.39759%;
+    float: right;
+    margin-right: 0;
+  }
+}
+.session-box p {
+  margin-bottom: 25px;
+}
+
+.room {
+  font-size: 12px;
+  line-height: 17px;
+  display: inline-block;
+  padding: 1px .7em 0;
+  background: #2f4768;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+.room.r0 {
+  background: #b6132d;
+}
+.room.r1 {
+  background: #878231;
+}
+.room.r2 {
+  background: #208e7f;
+}
+
 .agenda-table {
   margin-bottom: 75px;
 }
@@ -2408,18 +2534,19 @@ hr {
     letter-spacing: 1px;
     font-size: 12px;
     line-height: 2px;
+    height: 2px;
     position: relative;
   }
   .agenda-table .time-block:before {
     content: "";
     display: block;
-    width: 4px;
-    height: 4px;
-    border-radius: 2px;
+    width: 8px;
+    height: 2px;
     position: absolute;
-    top: -1px;
+    top: 0;
     left: 0;
-    background: red;
+    animation: time-light 1.5s infinite alternate;
+    -webkit-animation: time-light 1.5s infinite alternate;
   }
 }
 @media (min-width: 960px) {
@@ -2496,7 +2623,7 @@ hr {
     background: transparent;
     text-align: center;
   }
-  .session.room-all .time {
+  .session.room-all time {
     margin: 0;
   }
 }
@@ -2513,28 +2640,9 @@ hr {
   display: inline-block;
   margin-right: 1em;
 }
-.session .time {
+.session time {
   display: inline-block;
   margin-right: 1em;
-}
-.session .room {
-  font-size: 12px;
-  line-height: 17px;
-  display: inline-block;
-  padding: 1px .7em 0;
-  background: #2f4768;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
-}
-.session .room.r0 {
-  background: #b6132d;
-}
-.session .room.r1 {
-  background: #878231;
-}
-.session .room.r2 {
-  background: #208e7f;
 }
 .session:before {
   font-size: 12px;
@@ -2559,6 +2667,7 @@ hr {
   background: #208e7f;
 }
 .session.room-rest {
+  float: none;
   text-align: center;
   float: none;
   width: auto;
@@ -2578,17 +2687,35 @@ hr {
     margin-right: .5em;
   }
 }
-.session.room-rest .time {
+.session.room-rest time {
   margin: 0;
 }
 @media (min-width: 960px) {
-  .session.room-rest .time {
+  .session.room-rest time {
     display: inline-block;
   }
 }
 .session.long-time {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+@-webkit-keyframes time-light {
+  0% {
+    background: #990000;
+    box-shadow: none;
+    -webkit-animation-timing-function: linear;
+  }
+
+  50% {
+    background: red;
+    -webkit-animation-timing-function: ease-out;
+  }
+
+  100% {
+    background: #ff9999;
+    box-shadow: 0 0 7px 2px red;
+  }
 }
 
 [class*="obj-"] {

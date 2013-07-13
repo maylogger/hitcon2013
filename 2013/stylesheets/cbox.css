@@ -1,0 +1,180 @@
+#cboxOverlay {
+    background: #000
+}
+
+#colorbox {
+}
+
+#colorbox #cboxContent #cboxClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    background: #b6132d url(/2013/images/close.png) no-repeat center center;
+    background-size: cover;
+    text-indent: -99999em;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    z-index: 3000;
+    font-size: 25px;
+    line-height: 44px;
+    border: none;
+}
+
+#colorbox #cboxMiddleLeft {
+    display: none
+}
+
+.colorbox_content {
+    width: 280px;
+    height: 290px;
+    text-align: center;
+    padding: 25px
+}
+
+@media only screen and (min-width: 600px) {
+    .colorbox_content {
+        width: 540px;
+        height: 270px
+    }
+}
+
+.colorbox_content.large {
+    width: 280px;
+    height: 500px
+}
+
+@media only screen and (min-width: 600px) {
+    .colorbox_content.large {
+        width: 650px;
+        height: 500px
+    }
+}
+
+.colorbox_content .info {
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    display: block;
+    padding-left: 45px;
+    padding-right: 45px
+}
+
+.colorbox_help {
+    width: 320px;
+    padding: 25px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased
+}
+
+@media only screen and (min-width: 600px) {
+    .colorbox_help {
+        width: 540px
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .colorbox_help {
+        width: 650px
+    }
+}
+
+.colorbox_help>h2 {
+    margin-bottom: 15px
+}
+
+.colorbox_help figure>img, .colorbox_help figure>figcaption {
+    width: 50%;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    vertical-align: top;
+    vertical-align: top
+}
+
+.colorbox_help figure>figcaption {
+    color: #121011;
+    font-size: 1em;
+    line-height: 138%;
+    margin-top: 0;
+    padding-left: 15px
+}
+
+.colorbox_help figure>figcaption p {
+    margin-top: 0
+}
+
+.colorbox_help figure>figcaption p a {
+    float: none
+}
+
+#cboxLoadingOverlay {
+    background: #000
+}
+
+#colorbox, #cboxOverlay, #cboxWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    overflow: hidden
+}
+
+#cboxOverlay {
+    position: fixed;
+    width: 100%;
+    height: 100%
+}
+
+#cboxMiddleLeft, #cboxBottomLeft {
+    clear: left
+}
+
+#cboxContent {
+    position: relative
+}
+
+#cboxLoadedContent {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#cboxTitle {
+    margin: 0
+}
+
+#cboxLoadingOverlay, #cboxLoadingGraphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
+    cursor: pointer
+}
+
+.cboxPhoto {
+    float: left;
+    margin: auto;
+    border: 0;
+    display: block
+}
+
+.cboxIframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+    background: black;
+}
+
+.cboxIE #cboxTopLeft, .cboxIE #cboxTopCenter, .cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft, .cboxIE #cboxBottomCenter, .cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft, .cboxIE #cboxMiddleRight {
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF)
+}

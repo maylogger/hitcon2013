@@ -10,6 +10,35 @@ $(function() {
     $(".page").toggleClass("show-menu");
     return false;
   });
+
+  function resize_box() {
+      $(window).resize(function() {
+          $.colorbox.resize({
+              width: $(window).width(),
+              height: $(window).height()
+          });
+      });
+  }
+
+  function stop_resize_box() {
+      $(window).unbind('resize');
+  }
+
+  $('a.lightbox').on('click', function() {
+        $.colorbox({
+            opacity: 0.8,
+            fixed: true,
+            width: '100%',
+            initialWidth: '100%',
+            height: '100%',
+            initialHeight: '100%',
+            inline: true,
+            href: $(this).attr('href'),
+            onOpen: resize_box,
+            onClosed: stop_resize_box
+        });
+        return false;
+  });
 });
 
 
