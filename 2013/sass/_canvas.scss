@@ -1,0 +1,107 @@
+[class*="obj-"] {
+  margin: 0 auto;
+}
+
+.objgroup {
+  text-align: center;
+  [class*="obj-"] {
+    display: inline-block;
+  }
+}
+
+
+/* object - pointer 
+---------------------------------------------------------------------------------------------------------------------------------------*/
+
+.obj-pointer {
+  height: 100px;
+  width: 200px;
+}
+
+/* object - decoder
+---------------------------------------------------------------------------------------------------------------------------------------*/
+
+.obj-decoder {
+  height: 125px;
+  width: 39px; 
+}
+#mobile-network-decoder .obj-decoder {
+  float: left;
+  border-left: 1px solid #26334c;
+}
+
+#mobile-network-decoder .obj-decoder:first-child {
+  border-color: transparent;
+}
+
+/* object - terminal
+---------------------------------------------------------------------------------------------------------------------------------------*/
+
+.obj-terminal {
+  width: 200px;
+  height: 100px;
+  line-height: 5px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+#terminals .obj-terminal {
+  float: left;
+}
+
+/* object - password cracker
+---------------------------------------------------------------------------------------------------------------------------------------*/
+
+.obj-password-cracker {
+  width: 200px;
+  height: 25px;
+}
+
+/* object - scanner
+---------------------------------------------------------------------------------------------------------------------------------------*/
+
+.obj-scanner {
+  width: 100px;
+  height: 100px;
+}
+
+.scanner-panel {
+  position: absolute;
+  width: 98px;
+  left: 88px;
+  top: 27px;
+}
+
+.scanner-switch {
+  width: 100%;
+  height: 13px;
+  background: url('images/switch.svg') right top no-repeat;
+  margin-bottom: 5px;
+}
+
+.scanner-complete {
+  display: block;
+  width: 100%;
+  height: 11px;
+  background: url('images/complete.svg') right top no-repeat;
+}
+
+
+/* object - title bar
+---------------------------------------------------------------------------------------------------------------------------------------*/
+
+.obj-title-bar {
+  width: 115px;
+  height: 4px;
+  top: 33px;
+  left: 11px;
+}
+
+.obj-title-bar canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+}

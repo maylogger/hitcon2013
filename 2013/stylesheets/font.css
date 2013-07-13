@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'IdlewildLight';
+    src: url('fonts/idlewild-light.eot');
+    src: url('fonts/idlewild-light.eot') format('embedded-opentype'),
+         url('fonts/idlewild-light.woff') format('woff'),
+         url('fonts/idlewild-light.ttf') format('truetype'),
+         url('fonts/idlewild-light.svg#IdlewildLight') format('svg');
+}
+
+@font-face {
+    font-family: 'IdlewildThin';
+    src: url('fonts/idlewild-thin.eot');
+    src: url('fonts/idlewild-thin.eot') format('embedded-opentype'),
+         url('fonts/idlewild-thin.woff') format('woff'),
+         url('fonts/idlewild-thin.ttf') format('truetype'),
+         url('fonts/idlewild-thin.svg#IdlewildThin') format('svg');
+}
+
+@font-face {
+    font-family: 'IdlewildMedium';
+    src: url('fonts/idlewild-medium.eot');
+    src: url('fonts/idlewild-medium.eot') format('embedded-opentype'),
+         url('fonts/idlewild-medium.woff') format('woff'),
+         url('fonts/idlewild-medium.ttf') format('truetype'),
+         url('fonts/idlewild-medium.svg#IdlewildMedium') format('svg');
+}
+
+@font-face {
+    font-family: 'TungstenMedium';
+    src: url('fonts/tungsten-medium.eot');
+    src: url('fonts/tungsten-medium.eot') format('embedded-opentype'),
+         url('fonts/tungsten-medium.woff') format('woff'),
+         url('fonts/tungsten-medium.ttf') format('truetype'),
+         url('fonts/tungsten-medium.svg#TungstenMedium') format('svg');
+}
+
+@font-face {
+    font-family: 'Dingbats2.0OfficeOTRegular';
+    src: url('fonts/dingbats2officeot.eot');
+    src: url('fonts/dingbats2officeot.eot') format('embedded-opentype'),
+         url('fonts/dingbats2officeot.woff') format('woff'),
+         url('fonts/dingbats2officeot.ttf') format('truetype'),
+         url('fonts/dingbats2officeot.svg#Dingbats2.0OfficeOTRegular') format('svg');
+}
+

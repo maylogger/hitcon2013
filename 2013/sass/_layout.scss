@@ -251,10 +251,6 @@ $side   : $total-columns - $anchor;
   }
 }
 
-.agenda {
-  @extend %col2;
-}
-
 .registration {
   @extend %col2;
 }
