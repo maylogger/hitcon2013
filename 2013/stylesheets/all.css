@@ -2397,6 +2397,40 @@ hr {
 .agenda-table {
   margin-bottom: 75px;
 }
+@media (min-width: 720px) {
+  .agenda-table {
+    font-size: 12px;
+    padding-left: 1.5em;
+  }
+  .agenda-table .time-block {
+    margin-left: -1.5em;
+    text-indent: -4em;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 2px;
+    position: relative;
+  }
+  .agenda-table .time-block:before {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    background: red;
+  }
+}
+@media (min-width: 960px) {
+  .agenda-table {
+    padding-left: 6em;
+  }
+  .agenda-table .time-block {
+    margin-left: -2em;
+    text-indent: -4.4em;
+  }
+}
 
 .date-block p {
   margin: 0;
@@ -2411,6 +2445,9 @@ hr {
   border-color: #b6132d;
   text-align: center;
 }
+.date-block p small {
+  font-size: 12px;
+}
 
 .time-block {
   font-size: 12px;
@@ -2419,6 +2456,7 @@ hr {
   padding: 0 .5em;
   letter-spacing: 2px;
   font-weight: bold;
+  color: white;
 }
 
 .session {
@@ -2530,6 +2568,7 @@ hr {
   background: #1a283a;
 }
 .session.room-rest .title {
+  text-shadow: 0 0 10px #d1dffe;
   background: transparent;
   text-align: center;
 }
