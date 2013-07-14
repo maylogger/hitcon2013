@@ -2425,14 +2425,17 @@ hr {
   margin-bottom: 12px;
 }
 .session-box .speaker {
+  text-align: center;
   font-size: 16px;
   line-height: 25px;
 }
 .session-box .country {
+  text-align: center;
   font-size: 12px;
   line-height: 25px;
 }
 .session-box .company {
+  text-align: center;
   font-size: 12px;
   line-height: 25px;
   border-bottom-style: solid;
@@ -2440,6 +2443,18 @@ hr {
   padding-bottom: 11px;
   border-color: #2f4768;
   margin-bottom: 25px;
+}
+.session-box .download {
+  text-align: center;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  padding-bottom: 11px;
+  border-color: #2f4768;
+  margin-bottom: 25px;
+  margin-top: -12.5px;
+}
+.session-box .download a {
+  color: #b6132d;
 }
 .session-box .speaker-note {
   font-size: 12px;
@@ -2698,6 +2713,24 @@ hr {
 .session.long-time {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+@keyframes time-light {
+  0% {
+    background: #990000;
+    box-shadow: none;
+    animation-timing-function: linear;
+  }
+
+  50% {
+    background: red;
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    background: #ff9999;
+    box-shadow: 0 0 7px 2px red;
+  }
 }
 
 @-webkit-keyframes time-light {

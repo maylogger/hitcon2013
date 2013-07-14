@@ -26,16 +26,29 @@
     @include trailer(.5);
   }
   .speaker {
+    text-align: center;
     @include adjust-font-size-to(16px);
   }
   .country {
+    text-align: center;
     @include adjust-font-size-to(12px);
   }
   .company {
+    text-align: center;
     @include adjust-font-size-to(12px);
     @include trailing-border(1px, .5);
     border-color: $blue;
     @include trailer(1);
+  }
+  .download {
+    text-align: center;
+    a {
+      @include link-colors($red);
+    }
+    @include trailing-border(1px, .5);
+    border-color: $blue;
+    @include trailer(1);
+    margin-top: - $base-line-height / 2;
   }
   .speaker-note {
     @include pie-clearfix;
@@ -246,6 +259,21 @@
 
 
 
+@keyframes time-light {
+  0%   {
+    background: darken(red, 20%);
+    box-shadow: none;
+    animation-timing-function: linear;
+  }
+  50% {
+    background: red;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    background: lighten(red, 30%);
+    box-shadow: 0 0 7px 2px red;
+  }
+}
 
 @-webkit-keyframes time-light {
   0%   {
