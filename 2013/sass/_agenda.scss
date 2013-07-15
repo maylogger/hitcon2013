@@ -60,40 +60,56 @@
     border-color: $blue;
     @include trailer(1);
     .zh:before {
-      content: "講者簡介:";
+      content: "講者簡介";
       display: block;
       color: $yellow;
+      @include trailer(1);
     }
     .en:before {
-      content: "Speaker:";
+      content: "Speaker";
       display: block;
       color: $yellow;
+      @include trailer(1);
     }
   }
   .session-note {
     @include pie-clearfix;
     @include adjust-font-size-to(13px, 2/3);
     .zh:before {
-      content: "議程簡介:";
+      content: "議程簡介";
       display: block;
       color: $yellow;
+      @include trailer(1);
     }
     .en:before {
-      content: "Session:";
+      content: "Session";
       display: block;
       color: $yellow;
+      @include trailer(1);
     }
   }
   @include at-breakpoint($desktop) {
     .zh {
-      @include span-columns(6);
+      @include span-columns(2, 4);
     }
     .en {
-      @include span-columns(6 omega);
+      @include span-columns(2 omega, 4);
     }
   }
   p {
     @include trailer(1);
+  }
+  h3, h4 {
+    color: $green;
+    @include adjust-font-size-to(13px);
+  }
+  ul, ol {
+    list-style-type: square;
+    margin-left: 1.3em;
+    @include trailer(1);
+  }
+  li {
+    @include adjust-font-size-to(12px, 3/4);
   }
 }
 

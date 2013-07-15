@@ -2474,14 +2474,16 @@ hr {
   clear: both;
 }
 .session-box .speaker-note .zh:before {
-  content: "講者簡介:";
+  content: "講者簡介";
   display: block;
   color: #d1cc80;
+  margin-bottom: 25px;
 }
 .session-box .speaker-note .en:before {
-  content: "Speaker:";
+  content: "Speaker";
   display: block;
   color: #d1cc80;
+  margin-bottom: 25px;
 }
 .session-box .session-note {
   font-size: 13px;
@@ -2493,29 +2495,45 @@ hr {
   clear: both;
 }
 .session-box .session-note .zh:before {
-  content: "議程簡介:";
+  content: "議程簡介";
   display: block;
   color: #d1cc80;
+  margin-bottom: 25px;
 }
 .session-box .session-note .en:before {
-  content: "Session:";
+  content: "Session";
   display: block;
   color: #d1cc80;
+  margin-bottom: 25px;
 }
 @media (min-width: 960px) {
   .session-box .zh {
-    width: 49.39759%;
+    width: 48.14815%;
     float: left;
-    margin-right: 1.20482%;
+    margin-right: 3.7037%;
   }
   .session-box .en {
-    width: 49.39759%;
+    width: 48.14815%;
     float: right;
     margin-right: 0;
   }
 }
 .session-box p {
   margin-bottom: 25px;
+}
+.session-box h3, .session-box h4 {
+  color: #208e7f;
+  font-size: 13px;
+  line-height: 25px;
+}
+.session-box ul, .session-box ol {
+  list-style-type: square;
+  margin-left: 1.3em;
+  margin-bottom: 25px;
+}
+.session-box li {
+  font-size: 12px;
+  line-height: 18px;
 }
 
 .room {
