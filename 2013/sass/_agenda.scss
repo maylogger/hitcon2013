@@ -7,6 +7,8 @@
 }
 
 .session-box {
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-shadow: 0 2px 2px black;
   margin: 0 20px;
   @include leader(2);
   @include trailer(2);
@@ -20,9 +22,10 @@
     width: 40em;
   }
   .title {
+    @include adjust-font-size-to(24px,1.25);
     @include trailing-border(3px);
-    border-style: double;
-    border-color: $blue;
+    border-bottom-style: double;
+    border-bottom-color: $blue;
     @include trailer(.5);
   }
   .speaker {
@@ -31,11 +34,11 @@
   }
   .country {
     text-align: center;
-    @include adjust-font-size-to(12px);
+    @include adjust-font-size-to(13px);
   }
   .company {
     text-align: center;
-    @include adjust-font-size-to(12px);
+    @include adjust-font-size-to(13px);
     @include trailing-border(1px, .5);
     border-color: $blue;
     @include trailer(1);
@@ -52,7 +55,7 @@
   }
   .speaker-note {
     @include pie-clearfix;
-    @include adjust-font-size-to(12px, 2/3);
+    @include adjust-font-size-to(13px, 2/3);
     @include trailing-border(1px, .5);
     border-color: $blue;
     @include trailer(1);
@@ -69,7 +72,7 @@
   }
   .session-note {
     @include pie-clearfix;
-    @include adjust-font-size-to(12px, 2/3);
+    @include adjust-font-size-to(13px, 2/3);
     .zh:before {
       content: "議程簡介:";
       display: block;
@@ -162,6 +165,7 @@
   color: white;
 }
 .session {
+  -webkit-font-smoothing: antialiased;
   @include padding-leader(2/3);
   @include padding-trailer(2/3);
   @include adjust-font-size-to(12px, 2/3);

@@ -26,12 +26,12 @@ $(function() {
 
   $('a.lightbox').on('click', function() {
         $.colorbox({
-            opacity: 0.8,
+            opacity: 0.85,
             fixed: true,
+            initialWidth: '200px',
+            initialHeight: '200px',
             width: '100%',
-            initialWidth: '100%',
             height: '100%',
-            initialHeight: '100%',
             inline: true,
             href: $(this).attr('href'),
             onOpen: resize_box,

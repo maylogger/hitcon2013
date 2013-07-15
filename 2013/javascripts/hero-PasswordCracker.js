@@ -59,7 +59,7 @@ window[ns].prototype = {
       }.bind(this), 700);
       return ;
     }
-    if( Math.random() < .1 ) this.x += Math.Random( 0, 4 );
+    if( Math.random() < .1 ) this.x += Math.Random( 0, 4 ) * r;
   },
 
       reset: function() {
