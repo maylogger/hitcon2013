@@ -5,7 +5,7 @@
   .room.r2    R2
   .title      Opening Keynote
   .speaker    黃彥男
-  .country    Taiwan
+  .country    TW
   .company    行政院科技顧問組副執行秘書
   / .download   <a href="#">下載投影片</a>
   -#-------------------------------------------
@@ -28,7 +28,7 @@
   .room.r0    R0
   .title      駭客人民共和國: 中國, 伊朗跟俄羅斯網軍的分析與比較<br>People's Republic of Cyber Warfare: Comparing China, Iran & Russia Militarization of Cyberspace
   .speaker    William Hagestad II
-  .country    China
+  .country    CN
   .company    Red Dragon Rising
   / .download   <a href="#">下載投影片</a>
   -#-------------------------------------------
@@ -44,3 +44,792 @@
       %p 國家機關使用網路科技的動機 - 伊朗共和國、俄羅斯、中華人民共和國之間的比較與研究伊朗、俄羅斯、中國都擁有發展良好的資訊安全防護與攻擊技術，在西方世界看來。講者將會分享他以外國人的角度分析這3個國家的經驗，包含西方國家（外國人）的觀點以及這些國家在資訊領域發展進階武器的不同動機。
     .en
       %p Nation State Motivations for Using the Cyber Realm – Comparative Study of Islamic Republic of Iran, Russian Federation & the People’s Republic of China. International governments including the Islamic Republic of Iran, Russian Federation and the People’s Republic of China all have very well developed cyber capabilities both offensively and defensively; this is the Western world view. During this presentation a foreigner’s international experience reviewing, studying and researching these three nation states will be presented. Included in this 360 degree review will be both the Western/foreigner’s perspective and the distinct motivations by each country to feel compelled to develop such technologically advanced national security weapons in the information realm.
+
+
+#day1-a-r1.session-box
+  -#-------------------------------------------
+  .room.r1    R1
+  .title      程序員的蟲洞漂流<br>Life of Coder: The adventure through the landscape of bugs
+  .speaker    Tim Hsu
+  .country    TW
+  .company    CHROOT
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p 員外。資訊安全技術研究者，同時也是 Linux 愛好者。專長於網路程式設計、網路滲透測試、駭客攻擊手法研究、惡意程式分析及嵌入式系統等。
+    .en
+      %p Tim Hsu is an information security researcher, meanwhile, he is also a Linux fanboy. He specializes in network program design, network penetration testing, hacking technique research, and malware analysis and embedded system.
+  -# 議程說明
+  .session-note
+    .zh
+      %p 一般程序員都不大能理解程式臭蟲(BUG)在軟體安全上所造成的影響，更鮮少知道駭客如何將 BUG 轉化為漏洞(HOLE)利用。本次演講將以著名的漏洞為例，以淺顯易懂之方式，說明臭蟲與漏洞間的關係，希望對程序員的安全程式設計概念有所幫忙。
+    .en
+      %p Most programmers do not understand the consequences of bugs on software security, and even fewer of them knows how hackers turns bugs into exploits. This talk will use the example of famous exploits, and with a focus on understandability, explains the relationship between bugs and exploits,  in the hope of aiding programmers to design secure programs by having a better concept of security by design.
+
+
+#day1-a-r2.session-box
+  -#-------------------------------------------
+  .room.r2    R2
+  .title      建立惡意軟體分析的新武器<br>Building new weapons for malware analysts
+  .speaker    Nguyen Anh Quynh
+  .country    VN
+  .company    COSEINC
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p Nguyen Anh Quynh是一個擁有廣泛性趣的安全性研究員，其中包含作業系統(operating system)、虛擬化(virtualization)、可信賴運算(trusted computing)、數位鑑識(digital forensic)、入侵偵測系統(intrusion detection)、惡意軟體分析(malware analysis)及弱點偵測。曾在這些領域中發表大量的學術報告， 且經常於世界各地之駭客會議上演講他的研究結果。擁有日本應慶大學(Keio University)電腦科學博士學位的Quynh， 目前是越南最頂尖的安全研究團隊—VnSecurity的成員之一。
+    .en
+      %p Nguyen Anh Quynh is a security researcher with a variety of interests, including operating system, virtualization, trusted computing, digital forensic, intrusion detection, malware analysis, and vulnerability detection.  Not only has he published lots of publications in these areas, but also gives lectures on his results at conferences around the world.  Obtained a PhD degree in computer science at Keio University in Japan, Quynh is a member of VnSecurity, which is the best security research organization in Vietnam.
+  -# 議程說明
+  .session-note
+    .zh
+      %p 惡意軟體的海嘯一波又一波的衝向世界各地的安全專家，偵測與分析惡意軟體也變得越來越困難，主要是因爲它們逐漸演變的更加複雜。這場提出一些新的工具以在這場逐漸激烈的對抗當中協助惡意軟體的分析人員。我們會介紹一些框架，可以用來建構惡意軟體偵測及分析的工具。使用編譯器技術高度複雜的技巧，這些框架專精於 code normalization, code optimization 和 code equivalence 。我們認爲，這些新的方法可以讓我們解決惡意軟體產業長久以來的問題，以此爲目標，我們使用我們的框架建構了一些工具，其中2個會在 HITCON 中展示：第一個工具可以爲變種病毒產生語義簽章，另一個則是解譯二進位執行檔惡意軟體。我們的 talk 也會包含有趣的現場示範 。
+    .en
+      %p Everyday, the malware tsunami is overwhelming for security professionals across the world. Detecting and analyzing them become harder and harder, especially because the malware are getting more complicated. This talk proposes some new weapons so anti-malware analysts can be better equipped in this increasing fierce battle. We will introduce a range of frameworks, which can be used to build different tools to detect and analyze malware. Basing on highly sophisticated techniques of compiler and theorem prover, these frameworks focus on the aspects of code normalization, code optimization and code equivalence. In our view, this new practical approach gives us a better chance of solving some persistent problems of the malware industry. Towards this objective, we built several tools on top of our frameworks, and two of them will be presented at HitCon: the first one is to generate semantic signatures for metamorphic virus, and the other one is to deobfuscate binary malware. Some cool live demo will be available to entertain the audience during our talk.
+
+
+#day1-b-r0.session-box
+  -#-------------------------------------------
+  .room.r0    R0
+  .title      資料科學家未曾公開之資安研究事件簿<br>The undisclosed files of incidents by the data scientist
+  .speaker    陳昇瑋
+  .country    TW
+  .company    Sinica
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p 陳昇瑋博士目前為中央研究院資訊科學研究所以及資訊科技創新研究中心副研究員，同時是多媒體網路與系統實驗室主持人。他的研究焦點著重在使用者滿意度、多媒體系統及社群計算等領域，在線上遊戲及網路使用者滿意度的量測及管理方面持續有代表性的研究創見，更經常在知名的國際會議，包括 ACM SIGCOMM, IEEE INFOCOM, ACM Multimedia, ACM WWW, ACM CHI, ACM NetGames 等會議發表論文，提出獨創見解。
+      %p 陳博士所領導的研究團隊為全球少數致力於網路使用者滿意度量測的團隊，已完成的研究成果相當豐碩，其中包括為Skype及多人線上遊戲定義出客觀且易於計算的使用者滿意度指數、改善網路電話傳輸品質，以及提出快速的使用者滿意度的量測方法，此方法能夠以很低的成本量化使用者對於網路上所傳遞的聲音、影像以及互動式遊戲的感受。同時，該團隊亦為少數專注於線上遊戲維運議題的研究團隊，從遊戲的網路效能、使用者滿意度出發，研究作弊行為及外掛偵測，到近期的使用者行為分析及人機互動發展，他期待能促進學術研究與產界實務的完美結合，為國內數位內容產業帶來新的視角及契機。在網路安全方面，除了分析及量化因為社群網路系統而導致的非自願性個人資料洩露問題，也提出有效且快速的釣魚網頁偵測方法，並且開發瀏覽器外掛工具供大眾使用。
+      %p 陳昇瑋於國立臺灣大學電機工程學系取得博士學位 (2006)，於國立清華大學資訊工程學系取得碩士 (2000) 及學士 (1998) 學位。他於 2008 年獲得 IWSEC 2008 最佳論文獎，於 2009 年榮獲 ACM 台北／台灣分會李國鼎青年研究獎，於 2010 年榮獲中國電機工程學會優秀青年電機工程師獎，並於 2013 年榮獲傑出人才發展基金會年輕學者創新獎。進入學術界之前，他以陳寬達之名在技術領域闖蕩，曾是 Windows 及系統程式設計師、業界程式設計課程講師、技術書籍及雜誌專欄作者、共享軟體作者及 BBS 開發者／站長。
+    .en
+      %p 中央研究院副研究員
+  -# 議程說明
+  .session-note
+    .zh
+      %p 網路安全是一個特殊的研究領域，其中一個原因是在網路安全問題中，"對手"不是文字、影像或任何形式死板板的資料，而是活生生的人；這些製造問題的黑客 (black hat hackers) 終日找尋各種系統及網路漏洞，企圖提出更高明的攻擊方式來獲取各種可能的利益。因此，在網路安全研究中，我們無法"預設"黑客會有什麼樣的攻擊行為，而必須從真正的資料中尋找蛛絲馬跡，從大量資料中發現及解決各種已發生或將發生可能危害使用者資料安全及隱私的行為。在這場研究中，我將介紹 data-driven network security research 並以幾個實際的研究案例來展示真實資料的統計分析可以幫助我們解決什麼樣的安全問題。
+    .en
+      %p N/A
+
+
+#day1-b-r1.session-box
+  -#-------------------------------------------
+  .room.r1    R1
+  .title      那些洞，我們一起追的 OS X Rootkits<br>OS X Rootkits Stuff
+  .speaker    Pedro Vilaça
+  .country    PT
+  .company    COSEINC
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p Pedro 畢業於葡萄牙的 University of Porto Business School (EGP-UPBS)。 Pedro 雖然主修經濟管理，但是在資安界卻是相當知名駭客與資安顧問。 他也曾經 SIBS Informatica, Cesce SI 等著名公司擔任網管與資安顧問工作，不過有著駭客靈魂的 Pedro 來說，挖掘問題與逆向工程才是最愛! 自從 2003 年開始就熱衷於 Mac OS X 平台的逆向研究，包含 Debugging 與 Anti-Debugging 各種技術研究，是相當知名的 Mac OS 逆向專家，參與過多項 Mac OS 上 Reversing Tools 的開發與研究。 Pedro 堪稱是 Mac OS Reversing 界魔王級的大師
+    .en
+      %p Pedro graduated from Portugal's University of Porto Business School (EGP-UPBS). Although Pedro majored in Economics Management, but he is a widely known hacker and security consultant in the information security community. He had been working as security consultant/MIS at renowned companies such as SIBS Informatica, Cesce SI. However, to Pedro, someone with the hacker spirit, debugging and reverse engineering is his real interest. Since 2003, he's been into Mac OS X's reverse engineering, including debugging and anti-debugging techniques, and he is now a famous Mac OS X reverse engineering expert. He's been involved in developing many of Mac OS X's reversing tools. Pedro is the ultimate expert in the realm of Mac OS X Reversing.
+  -# 議程說明
+  .session-note
+    .zh
+      %p 沒有介紹
+    .en
+      %p This presentation is about giving a second opportunity to old school kernel extension rootkits. Besides Snare's EFI research, Mac OS X rootkit arena stopped in time, both in offensive and defensive terms.
+      %p Two very simple ideas open way to new opportunities to easily take control of Mach kernel and improve the rootkits quality (or dangerousness). To demonstrate their usefulness a few sample applications will be presented, mostly aimed at hiding the rootkit footprint and improve stealthiness.
+
+
+#day1-b-r2.session-box
+  -#-------------------------------------------
+  .room.r2    R2
+  .title      從系統設計建置面談 APT 防禦<br>APT defense from the view of security architecture
+  .speaker    Kiyoung Kim
+  .country    KR
+  .company    AhnLab
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p 沒有介紹
+    .en
+      %p Kiyoung Kim is a director of Convergence R&D division for AhnLab, Inc. who has over 16 years of experience in various information security areas. Kiyoung made solutions related with cryptography and authentication, and he also involved in making government security policies and standards. Kiyoung is developing transaction security solutions, Anti-APT solutions, and mobile solutions now.
+      %p https://www.facebook.com/kiyoung.kky
+  -# 議程說明
+  .session-note
+    .zh
+      %p 沒有介紹
+    .en
+      %p Recently, most of the security systems has been penetrated with APT attack. By now we all know clearly that any security product can be penetrated or bypassed. Many companies prepare various security systems and procedures, but most of the cases, it is hard to break the first or the second door. Once the attacker passes that door, the attacker has no hard time to reach the target he or she wants to reach. Of course, throughout the layered security concept various solutions are deployed, however it doesn’t help much. But, I believe that’s because we have missed essential element during development and establishment process. Let’s find out how to build a convenient and strong security by reviewing what we have missed.
+
+
+#day1-c-r0.session-box
+  -#-------------------------------------------
+  .room.r0    R0
+  .title      APT 特徵的視覺資料分析法<br>Visual Data Analytics - Graphing your Indicators
+  .speaker    Stephen Ginty &amp; Brandon Dixon
+  .country    US
+  .company    Verisign
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p Brandon 目前是美國 Verisign 的 Security Intelligence Engineer，同時他也是 9bplus 網站的創辦人。 曾經擔任過喬治華盛頓大學 (GWU) 的電腦鑑識與資安工程師。 現在 Brandon 專注在 APT 活動與惡意文件分析研究上，Brandon 近年來也在國際資安會議上發表，如 Defcon 17, Syscan 與 InfoSec Southwest。
+      %p Stephen Ginty是一位Verisign iDefense’s Advanced Threat Research團隊的資安工程師，他擁有超過六年的IT資安產業經驗，在過去的兩年半專注於研究目標式攻擊(Targeted Attacks). Steve專注的研究領域包含了威脅架構分析和開放源始碼的威脅研究。
+    .en
+      %p Brandon is currently Verisign's Security Intelligence Engineer, he is also the founder of 9bplus. He was George Washington University's Computer Forensic and Information Security Engineer. Brandon's current research focuses on APT and malicious document analysis. Brandon is speaker to international conferences like Defcon 17, Syscan and InfoSec Southwest.
+      %p Stephen Ginty is a Security Engineer for Verisign iDefense’s Advanced Threat Research team.  He has over six years of experience in the IT Security industry, the last two and a half of which have focused on researching targeted attacks. Steve’s research areas of focus include threat infrastructure analysis and open source threat research.
+  -# 議程說明
+  .session-note
+    .zh
+      %p 過去幾年以來，網路上的資料從分散在各個伺服器逐漸演變爲大批大批的聚集進資料中心，然後再傳播到世界各地。真的有必要儲存如此大量的資料嗎？這個問題目前恐怕無法回答，但是隨著科技的進步，儲存資料越來越便宜。資訊安全產業也收集資料，如同其他產業，巨量資料的挑戰在於如何在其中發現意義。如何在數 TB 的網域名稱、IP位址、惡意軟體程式、組合語言和流量統計資料當中找到下一次攻擊的跡象？這個演講將會討論視覺化資料分析的過程，視覺化資料分析是一種在分析當中展現資料的方法，可以迅速獲得有用的情報，像是 IP、網域名稱、關鍵字還有下一步研究的方向。
+    .en
+      %p Over the past several years, data has quickly gone from being sparsely collected to hoarded in mounds, locked away in data centers and spread across the world. Is there really a need to store so much information? That question has yet to be answered, but with advances in modern technology, it is relatively cheap to store every byte just in case it's needed later. Like other industries that collect data, information security and threat intelligence are no exception. The issue with large stores of data comes in making sense of it all. How does one sift through terabytes of domains, IP addresses, malware strings, assembly code and netflows to find the one indicator driving the next attack? This talk will cover a process best described as visual data analytics, a way to visualize data during analysis to quickly obtain actionable intelligence such as IP/domains to block, strings to search for on hosts and generally know what’s most critical to spend time researching.
+
+
+#day1-c-r1.session-box
+  -#-------------------------------------------
+  .room.r1    R1
+  .title      0-Day 輕鬆談 - Happy Fuzzing Internet Explorer<br>0-Day Easy Talk - Happy Fuzzing Internet Explorer
+  .speaker    Orange Tsai
+  .country    TW
+  .company    CHROOT
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p 蔡政達 a.k.a Orange :) 現任大學生中，主要專注於 Web Security, 網路滲透以及 Windows 上的弱點研究
+      %h3 Resume
+      %ul
+        %li DevCore 戴夫寇爾 成員
+        %li CHROOT Security Group 成員
+        %li 台灣駭客年會 2009 Wargame 冠軍
+        %li 行政院國家技服中心舉辦資安技能金盾獎第六屆、第七屆 冠軍
+        %li 日本資安研討會 AVTOKYO 2011 講師
+        %li 香港資安研討會 VXConf 2012 講師
+        %li 台灣 WebConf, PHPConf, Pycon 講師
+      %p Blog http://blog.orange.tw/
+    .en
+      %p Tsai Cheng-Da a.k.a Orange :) I am a college student now. Focus on Web Security, Penetration and Windows Exploitation.
+      %h3 Resume:
+      %ul
+        %li DevCore Member
+        %li CHROOT Security Group Member
+        %li HITCON 2009 Wargame Champion
+        %li Twice Champion for Information Security Contest Held by ICST
+        %li AVTOKYO (Security Conference held in Japan) 2011 Speaker
+        %li VXConf (Security Conference held in Hong Kong) 2012 Speaker
+        %li Taiwan WebConf, PHPConf, Pycon Speaker
+      %p Blog http://blog.orange.tw/
+  -# 議程說明
+  .session-note
+    .zh
+      %p 0-Day 怎麼來？Fuzzing 做為一種尋找漏洞的方式，讓你連躺著都有 0-Day 進帳。這是一場輕鬆的演講，分享一些 Fuzzer 的設計、Fuzzing 上的心得、Fuzzing Internet Explorer 上的方向。最後為本次 HITCON 揭露一個未公開的 0-Day。
+    .en
+      %p This is an Easy Talk! Fuzzing as a way of discovery vulnerability let you easy to find 0-Day. I'll  share Design of Fuzzer, Some of my review on Fuzzing, Directions on Fuzzing Internet Explorer. Lastly, I'll disclose an Internet Explorer 0-day for HITCON.
+
+
+#day1-c-r2.session-box
+  -#-------------------------------------------
+  .room.r2    R2
+  .title      數位鷹眼系統: 以網路數位情資對抗 APT 攻擊<br>Digital Eagle Eye System: Use Cyber Intelligence against APT Attacks
+  .speaker    Kevin Yu / skyo
+  .country    TW
+  .company    中華電信
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p 沒有介紹
+    .en
+      %p N/A
+  -# 議程說明
+  .session-note
+    .zh
+      %p 在企業網路的架構裡，散佈於各式主機、網路設備的各種數位稽核檔就如同現實世界中隨處可見的攝影機一樣，可記錄下在網路世界中的各式活動，其中也包含了各式的惡意網路攻擊行為與 APT  活動。如同現實生活中，執法機構會使用犯罪地區週遭的攝影機資料來縮小調查的範圍，在資訊安全防護上亦可以使用數位稽核檔這些網路世界的情資，來輕易完成其他技術較不容易達成的偵測及追查動作。而且數位稽核的功能不同於其他攻擊防護機制需另外開發及佈署，大多數的稽核功能皆已存在於各式主機、網路設備中，僅需被進行啟動，不過正如同現實生活中，許多攝影機往往在最需要的時候才知道它已經損壞許久，這些散落在各式主機與網路設備的數位情資也往往被大多數人所忽略。本次將分享如何利用各式主機、網路設備的數位稽核檔進行鑑識與分析來追查及防禦 APT 活動，找出潛在的 APT 受害者與攻擊的源頭。
+    .en
+      %p N/A
+
+
+#day1-d-r0.session-box
+  -#-------------------------------------------
+  .room.r0    R0
+  .title      全球間諜：互聯網監控全球趨勢 棱鏡門與中國駭客威脅論<br>Global Cyber Espionage and Chinese Hacker Threats, Internet Survillance and PRISM
+  .speaker    萬濤
+  .country    CN
+  .company    IDF
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p 萬濤，1993 年畢業于北京交通大學，IDF互聯網威懾防禦實驗室的創始人，中國大陸最早接受 ICSA 國際電腦安全協會及 IDEFENSE 互聯網威懾情報專業培訓的資訊安全專家。 1992 年起就進入電腦病毒與解密技術領域的研究工作，先後在普華永道、美國 CA 等企業任職，有多年的資訊安全產品研發和資訊安全治理與架構設計諮詢顧問服務經驗，曾擔任領銜多個大型資訊安全專案的首席安全顧問或架構師。在資訊安全業界一直宣導“從善如流”的安全文化，並致力於青少年網路犯罪預防與促進大陸公益領域資訊化能力建設。
+    .en
+      %p N/A
+  -# 議程說明
+  .session-note
+    .zh
+      %ul
+        %li 全球間諜：互聯網監控全球趨勢 棱鏡門與中國駭客威脅論
+        %li IDF互聯網威懾防禦實驗室：@駭客老鷹
+        %li 斯諾登：上個世紀的潘戈“平衡計畫”滿血復活？還是1984時代正在到來？
+      %p 中國（大陸）駭客威脅論為何喧囂不止？他們到底是怎樣的"與眾不同“？2013年，駭客是如此深刻的改變世界！
+      %ul
+        %li 全球互聯網監控概貌、技術與投資
+        %li 潘戈“平衡計畫”與斯諾登“棱鏡門”
+        %li 中國（大陸）駭客威脅論的歷史與今天（從木馬工程到APT案例）
+        %li 2013中國大陸版安全熱點預測
+    .en
+      %p N/A
+
+
+#day1-d-r1.session-box
+  -#-------------------------------------------
+  .room.r1    R1
+  .title      惡意軟體的進階免殺技巧<br>Advance Malware Evasion and Hiding Techniques
+  .speaker    Rong Hwa Chong
+  .country    SG
+  .company    FireEye
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p Chong Rong Hwa，目前隸屬於FireEye Labs的資深資訊安全研究員，他的研究專長是惡意軟體分析以及Incident Response。同時，Rong Hwa也在新加坡南洋理工學院擔任講座教授，教授惡意軟體分析課程。他曾參與新加坡Honeynet Project以及National Infocomm Competency Freamwork Technial Committee & Exper Panel；在加入FireEye前RongHwa也擔任過新加坡CERT以及官方CERT的主任研究員，從他豐富的經歷可以看出他對於資訊安全研究擁有強烈的熱誠。Rong Hwa在逆向工程上的貢獻也讓人印象深刻，在GovWare 2012，Rong Hwa成功的展示隊NGRBot的全面分析。他出色的研究成果也獲得SANS Institute GERM的金級認證肯定。Rong Hwa以優異的GPA 4.8分成績畢業於新加坡南洋理工大學，並獲選為畢業生致詞代表，他在學校期間主要研究領域為影像處理、數位訊號處理以及資訊安全和加密研究。
+    .en
+      %p Mr. Chong Rong Hwa is a Senior Malware Researcher for FireEye Labs, focused in the area of Malware Analysis and Incident Response.  Rong Hwa conducts APT malware and trend analysis, and regularly contributes to the FireEye blog. Aside, he is also currently an adjunct lecturer in Nanyang Polytechinic (Singapore) teaching Malware Analysis. This strong passion in IT security is further seen through his participation in Honeynet Project (Singapore Chapter) and National Infocomm Competency Framework (NICF) Technical Committee & Expert Panel. Prior joining FireEye, Rong Hwa was the lead malware researcher for Singapore CERT and Government CERT. Rong Hwa spoke in the GovWare 2012 and demonstrated the impact of fully analyzed malware dubbed NGRBot.  He was also certified in GREM (GOLD) by SANS Institute for one of the research work that he has published. Rong Hwa was the Valedictorian of his cohort, and earned a First Class Honours in Computer Engineering from Nanyang Technological University (Singapore) with a GPA 4.8/5.0, specializing in the area of Image Processing, Digital Signals Processing and Information Security & Cryptography.
+  -# 議程說明
+  .session-note
+    .zh
+      %p 在 APT 威脅和惡意軟體領域當中，特定目標的攻擊在過去幾年逐漸成爲常態，然而問題只會變得更糟。在這場 talk 當中，Rong Hwa 將會進行數項惡意軟體的分析，以展現及解釋這些複雜的技巧如何躲避傳統的防禦方式。將會就以下幾點進行討論：
+      %ol
+        %li 惡意軟體透過哪些常見的管道來感染終端使用者？
+        %li 惡意軟體如何利用尋常的加密演算法來產生與衆不同的地方？
+        %li 惡意軟體如何躲避網路安全系統？
+        %li 在不使用進階打包器的情況下，惡意軟體如何躲避防毒軟體？
+        %li 惡意軟體利用已知分析軟體的漏洞來減少偵測的技巧？
+        %li 惡意軟體如何逃過鑑識調查？
+    .en
+      %p Looking at the area of APT malware and threat landscape, a trend of targeted attacks has become the norm over the past few years, and the problem is only getting worse. Through this presentation, Rong Hwa will use the analysis of interesting malware samples to illustrate and explain how these advanced techniques are deployed to evade traditional defences. Below are some of the discussion items:
+      %ol
+        %li What are the common infection vectors that the malware use to reach end users?
+        %li How could a malware leverage on standard encryption algorithm to create something custom?
+        %li What could a malware do to evade network security technologies?
+        %li Not leveraging on any advance packers, how could a malware evade anti-virus software.
+        %li The techniques that malwares has used to minimise detection using known exploits through study of known analysis tools?
+        %li How could a malware evade (live or offline) forensic investigation?
+
+
+#day1-d-r2.session-box
+  -#-------------------------------------------
+  .room.r2    R2
+  .title      深入Dalvik Dex教學:反制模擬器<br>Dex Education 201: Anti-Emulators
+  .speaker    Tim Strazzere
+  .country    US
+  .company    Lookout Mobile Security
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p Tim Strazzere是來自Lookout Mobile Security的資訊安全工程師，Tim的專長是逆向工程以及惡意程式分析。他曾進行對Android Market的協定進行逆向分析、反組譯Dalvik以及在行動裝置上進行Memory manipulation。
+    .en
+      %p Tim Strazzere is a Security Engineer at Lookout Mobile Security. Along with writing security software, he specializes in reverse engineering and malware analysis. Some interesting past projects include having reversed the Android Market protocol, Dalvik decompilers and memory manipulation on mobile devices.
+  -# 議程說明
+  .session-note
+    .zh
+      %p 沒有介紹
+    .en
+      %p N/A
+
+
+#day1-e-r0.session-box
+  -#-------------------------------------------
+  .room.r0    R0
+  .title      APT網際飛梭：從自動化分析到拆解 APT 後台駭客活動<br>APT Cyber Shuttle: From Automated Analysis to TTP Observation
+  .speaker    Xecure-Lab &amp; Sinica
+  .country    TW
+  .company    
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p 叢培侃(PK), 邱銘彰(Birdman), 吳明蔚(Benson), 肥阿多(Fyodor)
+    .en
+      %p 叢培侃(PK)：中央研究院計算機中心資安組組長
+      %p Tsung Peikan (aka PK) has experience of intensive computer forensic, malware and exploits analysis and reverse engineering. PK, specializing in cybercrime and APT investigation, worked for National Police Agency for six years before. Besides conducting various trainings and workshops for practitioners, he is also the speaker of Taiwan Network Information Center (TWNIC),Defcon, SyScan and HITCON as well as FutureGOV conference. PK is working for Academia Sinica Computing Center as a leader of Information Security Department now and doing research on advanced threats.
+      %p Birdman: Xecure Lab
+      %p Jeremy Chiu (aka Birdman) has more than ten years of experience with malware analysis, host-based security, exploit research and focusing on kernel technologies for both the Win32 and Linux platforms. In Taiwan, he is recognized as a very senior anti-malware programmer and early pioneer in APT research. For many years, he frequently gave talks at security conferences like DEFCON , SyScan , HITCON , AVTokyo 2011, HTICA  and OWASP Asia.
+      %p Benson: Xecure Lab
+      %p Benson came from academia background with strong research interests in formalizing advanced cyber operations, malware analysis, secure coding, and intelligence mining. He got graduated from National Taiwan University with PhD in Electrical Engineering and National Chiao-Tung University with MS in Computer Science. He held ECSP, CEI, CSSLP certifications. Benson had given talks at DEFCON , NIST SATE , OWASP China , Botnets of Taiwan 2011, Hacks in Taiwan, AVTokyo and SyScan . He is also the author of the several government security guidelines for the Taiwanese government since year 2007.
+      %p Fyodor Yarochkin (xecure-lab, o0o.nu) is a Security Researcher at Academia Sinica/Taiwan. He is a happy programmer and AI hobbyist in his free time. He is also a major contributor to Open Source security tools (snort, xprobe, etc). Fyodor has extensive experience in forensic analysis of malicious software, computer crime incidents, and intrusion detection. With his recent interest in large-scale computing he has access to terabytes of interesting data at hand ;-)
+  -# 議程說明
+  .session-note
+    .zh
+      %p 在本場次中，中研院與 Xecure Lab將會合力發表最新對於 APT攻擊活動的研究，從自動化分析平台與工具，到拆解APT後台駭客活動。對於其中一群APT駭客作了完整與深入的研究，並展示駭客整體的攻擊與運作模型，本場也將會在美國Blackhat 2013 發表。各位道友，我只能說，如果這場沒聽到，今年HITCON 你就白來了...
+    .en
+      %p APT attacks are a new emerging threat and have made headlines in recent years. However, we have yet to see full-scale assessment of targeted attack operations. Taiwan has been a long term target for these cyber-attacks due to its highly developed network infrastructure and sensitive political position. We had a unique chance to monitor, detect, investigate, and mitigate a large number of attacks on government and private sector companies. This presentation will introduce our results of a joint research between Xecure-Lab and Academia Sinica on targeted attack operations across the Taiwan Strait. We have developed a fully automated system, XecScan 2.0 (http://scan.xecure-lab.com) equipped with unique dynamic (sandbox) and static malicious software forensics technology to analyze nature and behavior of malicious binaries and document exploits. During this presentation we will release a free, publicly accessible portal to our collaborative APT classification platform and access to the XecScan 2.0 APIs.
+
+
+#day1-e-r1.session-box
+  -#-------------------------------------------
+  .room.r1    R1
+  .title      線上遊戲矛盾大對決<br>Spears and shields on online game
+  .speaker    Seunghyun Seo
+  .country    KR
+  .company    
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p 某日本社群網路公司的安全分析師 CISA, CISSP, JSSEC member Shawn의 도쿄이야기   Blog︰http://blog.naver.com/truefroggie
+    .en
+      %p Seunghyun works as a security analyst. CISA, CISSP, JSSEC member. Blog: http://blog.naver.com/truefroggie
+  -# 議程說明
+  .session-note
+    .zh
+      %p 沒有介紹
+    .en
+      %p While online game is getting more popular in the world, its risk is also getting higher and more critical.
+      %p In this presentation, we are gonna review how game hackers compromise online games and how we can protect us from these techniques ( for instance, memory search, position hack, speed hack, wall hack ... )
+
+
+#day1-e-r2.session-box
+  -#-------------------------------------------
+  .room.r2    R2
+  .title      目標鎖定攻擊與工控系統安全：日本如何應對兩大趨勢<br>How does Japan dea with Targeted Attack and SCADA Security
+  .speaker    林永熙 Jack
+  .country    JP
+  .company    JPCert
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p 林永熙
+      %p 日本電腦網路危機處理暨協調中心（JPCERT/CC）資訊安全分析家
+      %p 1997年畢業於國立中央大學物理學系，2002年畢業於日本國立電氣通信大學資訊系統研究所，工學碩士。2002年至2005年任職於日本SGI株式會社，從事大型計算機業務。2005年至今任職於日本電腦網路危機處理暨協調中心（JPCERT/CC），從事漏洞處理協調、新團隊籌措與建置及事件應急處理。2009年任日本國際合作機構(JiCA)專家，派遣至柬埔寨王國國家資訊通信技術開發局。2012年任日本一般財團法人海外產業人才培育協會(HIDA)專家，派遣至緬甸聯邦共和國郵電部。擁有CEH（道德黑客認證），CISA（國際資訊系統審計師），MCSE（微軟認證系統工程師），日本個人資訊保護法專家(PiPL)等職業證照。
+    .en
+      %p Jack is an information security analyst from JPCERT/CC. Received his Master's of Engineering degree in Information Systems from University of Electro-Communications in 2002. Work experience ranges from the SGI Japan, Ltd. as an engineer during 2002 and 2005, to being the current security analyst for JPCERT/CC. His work interests include incident handling, CSIRT establishment support, APT analysis, Internet filtering and personal information protection. Jack holds multiple certificates such as CEH (Certified Ethical Hacker), CISA (Certified Information Systems Auditor), MCSE (Microsoft Certified Systems Engineer) and PiPL (Personal Information Protection Law specialist).
+  -# 議程說明
+  .session-note
+    .zh
+      %p 「目標鎖定攻擊與工控系統安全：日本如何應對兩大趨勢」
+      %p 時下，利用電子郵件搭配社交工程的目標鎖定攻擊(Targeted Attack)已困擾業界多年。接著，在重要基礎設施中廣泛被採用的工業控制系統(Industrial Control Systems)也開始受到攻擊，工控系統安全(ICS Security)因此成為另一個重要議題。更甚者，近來已多次出現組合兩者攻擊-針對工控系統的目標鎖定攻擊。因應此類攻擊，除了採用先進防禦技術的同時，在防範體系的規劃上也需要做整體的計劃。本報告將以非技術觀點為主要，介紹日本如何因應此兩大攻擊趨勢。
+    .en
+      %p N/A
+
+
+#day2-f-r0.session-box
+  -#-------------------------------------------
+  .room.r0    R0
+  .title      戳戳防毒軟體死穴<br>Killing AV in x64
+  .speaker    Kenny
+  .country    TW
+  .company    CHROOT
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p kenny，現任研究生。熱愛資訊安全研究，自三年前踏進便不可自拔，專注於Windows駭客攻擊手法研究、惡意程式分析。
+      %h3 經歷
+      %ul
+        %li CHROOT Security Group 成員
+        %li 某政府單位教育訓練講師
+    .en
+      %p Kenny, currently a graduate student. Since three years ago, when he first started his journey on researching in the field of information security, he deeply fell in love with this field of study. He focuses on Windows Hacking Technique and malware analysis.
+      %h3 Resume:
+      %ul
+        %li Chroot Security Group Member
+        %li Education Trainer for a Government Department.
+  -# 議程說明
+  .session-note
+    .zh
+      %p 本研究以Win7 x64環境為例，講解如何繞過防毒提升為系統權限，並分別從UserMode與KernelMode實作攻擊測試。
+    .en
+      %p N/A
+
+
+#day2-f-r1.session-box
+  -#-------------------------------------------
+  .room.r1    R1
+  .title      Android平臺安全性漏洞回顧<br>Review of Security Vulnerabilities on the Android Platform
+  .speaker    肖梓航 Claud
+  .country    CN
+  .company    安天實驗室
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p 肖梓航（Claud Xiao）是安天实验室的高级研究员，主要兴趣方向包括Android和Windows平台的反病毒、软件安全和软件保护技术，以及开源硬件安全。他曾发现并上报Android系统和流行软件的多个漏洞，创办和指导多个中文的移动安全社区，并在MDCC、CNCERT年会、xKungfoo、ISF等移动开发会议和安全会议上做技术报告。
+    .en
+      %p Zihang Xiao (aka Claud Xiao) is a senior researcher at Antiy Labs. His main interests include antivirus, software security and software protection on Android and Windows, as well as open source hardware security. He has found and reported many vulnerabilities of Android system and popular applications, founded and directed some Chinese mobile security communities, and been invited to give technical report in mobile development conferenes and security conferences such as MDCC, CNCERT Conference, xKungfoo, and ISF. 
+  -# 議程說明
+  .session-note
+    .zh
+      %p 过去几年，Android平台的内核、系统、框架与应用软件中出现了各种类型的安全漏洞。在这个议题中，我们将对这些漏洞进行全面的回顾，深入分析其中的经典案例，并讨论漏洞产生的原因，从而为进一步的漏洞挖掘、检测、修复等提供参考。此外，我们还将讨论并部分公布当前Android系统中存在的新的提权和数据泄露漏洞。
+    .en
+      %p In past years, many kinds of security vulnerabilities were found in the kernel, system, framework and applications of the Android platform. In this topic, we'll try to fully review these vulnerabilities, deeply analyse some classical examples of them, and discuss the causes of them. This will provides reference for mining, detecting and fixing vulnerabilities in the future. In addition, we will talk about and partly disclose some new privilege escalation and data leaking vulnerabilities in the Android system.
+
+
+#day2-f-r2.session-box
+  -#-------------------------------------------
+  .room.r2    R2
+  .title      請謹慎編碼，哪怕它只是一句錯誤處理— 來自 win32k!EPATHOBJ::pprFlattenRec 漏洞的啟示<br>Analysis on the EPATHOBJ Exploit
+  .speaker    王宇
+  .country    CN
+  .company    奇虎360
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p 王宇是奇虎360 公司的安全研究人員。他主要從事雲安全解決方案的研究；Rootkit / Anti-Rootkit 相關分析、攻防；漏洞挖掘等方面的工作。
+    .en
+      %p Wang Yu, Currently works at Qihoo 360 Technology Co.,Ltd. as a security researcher. He engages in cloud security solution research, Rootkit / Anti-Rootkit and vulnerability discovery.
+  -# 議程說明
+  .session-note
+    .zh
+      %p 2013 年 3 月 Tavis Ormandy 披露了一個微軟 Win32K 模組問題 —— 在記憶體壓力測試的情況下，routine win32k!EPATHOBJ::bFlatten 發生了藍色畫面錯誤。接下來，關於該藍屏的利用過程可謂是一波三折。5 月，隨著對鏈表關係的深度分析，藍色當機問題終於上升為任意地址寫入的本地提權問題，exploit-db 網站對此問題的關注度隨之激增。本議題將聚焦於 win32k!EPATHOBJ 子系統資料結構的背景、設計與實現，以白盒的視角審視上述提權漏洞的原理及利用細節，我們還將深入探討該漏洞帶給我們的思考與啟示。
+    .en
+      %p N/A
+
+
+#day2-g-r0.session-box
+  -#-------------------------------------------
+  .room.r0    R0
+  .title      南韓如何培養白帽駭客？<br>How South Korea Makes White-hat Hackers 2013 edition
+  .speaker    Lee SeungJin / Beist
+  .country    KR
+  .company    GreyHash
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p Beist 從2000年開始成為IT資安領域的一員，他任職的第一間公司在南韓首爾做網路研究，並專注於滲透測試。之後他在世宗大學取得了計算機工程學士學位。
+      %p 他曾在韓國贏得超過十場的全球CTF駭客大賽，並且通過DefCon資格賽五次。他的研究曾販賣給像iDefense和ZDI這類的資安公司。
+      %p 他在韓國已經參加過多場資安的研討會及駭客大賽，他最大的興趣是尋找以及利用漏洞。他為韓國許多家大公司做資安顧問，現在為CIST IAS實驗室的研究生。除此之外，他還擔任了韓國BoB計畫的導師，BoB為政府支援作為教育下一代資訊安全專業知識的計畫。
+    .en
+      %p Beist has been a member of the IT security field since 2000. His first company was Cyber Research based in Seoul, South Korea and focused on pen-testing. He then got a Computer Engineering B.A. degree from Sejong University.
+      %p He has won more than 10 global CTF hacking contests in his country as well as passed DefCon quals 5 times. He has sold his research to major security companies like iDefense and ZDI (Recon ZDI contest).
+      %p He has run numerous security conferences and hacking contests in Korea. Hunting bugs and exploiting them are his main interest. He does consulting for big companies in Korea and is now a graduate student at CIST IAS LAB, Korea University. Also, he is one of mentors for BoB in Korea which is a government supported program for educating next generation information security professionals.
+  -# 議程說明
+  .session-note
+    .zh
+      %p 媒體常說現在是數位戰爭的時代，那麼在這個時代哪個東亞國家表現的很好呢？南韓擁有組織良好且活躍的資訊安全社群，舉例來說，僅僅在這樣一個小國家，我們每年有超過10場資訊安全會議和10場資安競賽，並且有令人驚訝的超過200家電腦安全公司。
+      %p 在這場演講，我們會介紹一些政府、軍方、學術界、企業界和社群試圖營造下一世代的案例，每個案例都有不同的策略和目標，舉例來說，政府主辦的臭蟲獎勵和安全專家訓練在全世界相當少見；南韓的大學也有東亞少見的資訊安全科系。我們將會介紹許多不同的案例。
+    .en
+      %p Media says we're on cyber-war. Which country is doing good in east asia? South Korea is known for having a well organized and activated info-sec community. For example, we have over 10 information security conferences and 10 hacking contests per year in this small country. And it's somehow surprising that South Korea has over 200 computer security companies.
+      %p In this talk, we'll introduce some cases that how the government, army, academy, industry and community are trying to make the next generation. Each of them has a different strategy and they have different goals. For instance, having bug bounties or security expert training programs by the government is pretty rare around the world. And you can hardly find information security majors in colleges in east asia. We'll cover a variety of cases about it.
+
+
+#day2-g-r1.session-box
+  -#-------------------------------------------
+  .room.r1    R1
+  .title      逃離安卓動態檢測 &amp; 訂票助手一日談<br>Escaping Android Dynamic Analysis; Chinese New Year Train Ticket Ordering Day
+  .speaker    趙閩 &amp; 倪超
+  .country    CN
+  .company    金山網路
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p 沒有介紹
+    .en
+      %p 金山
+  -# 議程說明
+  .session-note
+    .zh
+      %p 沒有介紹
+    .en
+      %p N/A
+
+
+#day2-g-r2.session-box
+  -#-------------------------------------------
+  .room.r2    R2
+  .title      光與影 日本銀行業的資訊安全<br>Light &amp; Shadow about Banking $ecurity @Japan
+  .speaker    Hiroshi Aido &amp; Manaka Takane
+  .country    JP
+  .company    
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p Aido 先生為日本某銀行資訊系統公司的主任安全研究員，也是 AVTOKYO 2009,2010,2011講師，擁有 CISSP,CISA 證照。
+    .en
+      %p System Risk management team at large Bank.Security Resercher about Banking system.
+      %ul
+        %li HITCON Speaker(2012), AVTOKYO Speaker(2009,2010,2011)
+        %li CISSP, CISA
+      %p Specialized magazine "Hacker Japan"'s Regular writer.And he successfully took his girlfriend out from the virtual game world.
+  -# 議程說明
+  .session-note
+    .zh
+      %p 日本很多銀行為了防止錢被以詐欺、釣魚或間諜軟體的方式詐取，實施了一些自創的預防措施。但不幸的他們無法保護他們的客戶免於犯罪者的攻擊，我將會解釋這些預防措施的光明面與黑暗面。
+    .en
+      %p In order to prevent drawing money by fraud, phishing or spyware, many banks performed original various measures in Japan. It's unfortunate but they failed to protect their customers from a crime. I will explain the light and the shadow of those measures.
+
+
+#day2-h-r0.session-box
+  -#-------------------------------------------
+  .room.r0    R0
+  .title      APT1: 反攻網軍後台<br>APT1: Technical Backstage
+  .speaker    Paul Rascagneres
+  .country    LU
+  .company    Malware.Lu
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p Paul Rascagnere曾受邀到各大國際資訊研討會分享，如Codegate, Hack.lu, Malcon, BugCon, HES, NDH, Insomni'hack...等。做為一個資訊安全研究者以及資訊安全顧問，Paul有10年的經驗專注在這個領域中。他一手打造了mailware.lu這個惡意軟體知識庫，並提供惡意程式樣本以及相關的技術分析供相關研究者使用。Paul不僅擅於逆向工程、惡意程式分析，Paul更在盧森堡設置了第一個私人的CERT，足以證明他在Incident Response的能力。
+    .en
+      %p Paul has been a security consultant and security researcher for 10 years. He is the creator of the project malware.lu, a repository of free malware samples for security researchers which also publishes technical analysis. Paul created the first private CERT in Luxembourg and also makes reverse engineering, malware analysis and incident response.Paul is speaker to several international security events as Codegate, Hack.lu, Malcon, BugCon, HES, NDH, Insomni'hack...
+  -# 議程說明
+  .session-note
+    .zh
+      %p Mandiant 公司年初發佈了關於一個稱作 APT1 組織的報告，我們決定基於 Mandiant 提供的資訊對 APT1 展開調查。我們寫了一個掃描器來幫我們偵測報告中提到的 C&C 工具，一旦找到 C&C ，我們嘗試瞭解更多資訊關於他們的活動和方法。有了這份分析，我們找到了他們使用的基礎設施、工具和惡意軟體，這次演講解釋了詳細的過程和成果，在結尾，我會特別提到關於位於臺灣的攻擊目標。
+    .en
+      %p Mandiant published at the beginning of the year an article about a group called APT1. We decided to perform our own analysis of this group based on the information provided by Mandiant. We wrote a scanner to help us to find the C&C mentioned on the report. Once the C&C discovered, we started to find a way to have more information about their activities and their methodologies. Thanks to this analysis, we identifies their infrastructures, tools and malware used to attack their targets. This talk will explains our works and the results. To finish, I will speak in particularly about targets located in Taiwan.
+
+
+#day2-h-r1.session-box
+  -#-------------------------------------------
+  .room.r1    R1
+  .title      超級祕訣 - 一天擁有 100 個 0day!
+  How can i have 100 0day for just 1day
+  .speaker    Louis Hur
+  .country    KR
+  .company    NSHC
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p 沒有介紹
+    .en
+      %p Louis Hur is corporate president and Chief Executive Officer (CEO) of NSHC Corporation. He co-founded NSHC with four Hackers in 2003 while studying at the University, and was the first CEO until now Mr. Louis brings more than 15 years of field-proven experience security and  bug hunting businesses that help clients reduce their enterprise-wide IT security risk. Prior to starting NSHC, He is a frequent speaker on Internet security issues and has appeared as an expert on various media outlets, including HK TV and MBC, KBS. R3d4l3rt’s researchers are also dedicated to finding new and unpatched security vulnerabilities.
+      %h3 Experience (2010 ~ 2013)
+      %ul
+        %li 2013 Vulnerability Analysis of NSHC’s R3d4l3rt Teams. (Discovered 0-day many times. )
+        %li 2012 iOS Forensic Published translation.
+        %li 2011 Black-Hat Abu Dhabi Speaker 
+        %li 2010 CSO Conference Speaker 
+
+  -# 議程說明
+  .session-note
+    .zh
+      %p 沒有介紹
+    .en
+      %p There are so many 0day on internet. this topic, we're talking about APT attacks from Active-X Vulnerability. Of course, We're planning to talk about "how can i find one hundred 0-day for just 1-day and how many vulnerability we can find in just one day.
+      %p we're going to introduce our tools and know-how. and we'll show the interest demonstration what unpatched vulnerability
+
+
+#day2-h-r2.session-box
+  -#-------------------------------------------
+  .room.r2    R2
+  .title      CAPTCHA 好好玩<br>Breaking image CAPTCHA for fun
+  .speaker    Frank Tse
+  .country    HK
+  .company    Nexusguard
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p Frank 目前是 Nexusguard 的研究經理, Nexusguard 是知名的 DDoS 防護解決廠商. 他是一位經驗豐富的 DDoS 攻擊防護網絡安全專家，負責了解最新的 DDoS 攻擊手法和發展先發製人 的防護戰略，三年來在 Nexusguard 第一線處理過每個月上百起 DDoS 攻擊事件，實務經驗相當豐富。 他也是 DDoS 相關事宜的學術和研究機構的協調窗口 。
+    .en
+      %p Frank is a research manager in Nexusguard. Nexusguard is a well known security vendor to provide solution of DDoS attack. Frank is an experienced security expert to defend DDoS attack. His job is to find the newest DDoS attack methods and evolve the defend strategy preemptively. In this three years, Frank has handled more than 100 DDoS attack events per month in first line. Frank is also a contact window to coordinate the related matters of DDoS with academic and research institutions.
+  -# 議程說明
+  .session-note
+    .zh
+      %p CAPTCHA 驗證碼是保護網站免於攻擊和不正常請求的方法之一，但是要在安全性、功能性和易用性之間取得平衡相當困難。圖片式 CAPTCHA 與傳統的文字 CAPTCHA 不同，雖然犧牲了一些安全性，但因爲使用者只需要點選正確的圖片，大大提升了使用者體驗。顯示一系列圖片，使用者很輕鬆就可以找出正確的圖片，而機器人卻難以辦到這點，事實上並非如此，至少不久之後就不會是。就像開鎖，破解圖片式 CAPTCHA 可以從這幾點開始思考：
+      %ol
+        %li 繞過（不直接面對鎖） - 利用替代的表單或注入
+        %li 使用技巧（模擬鑰匙或是模仿開鎖的過程） - 使用 OCR （文字辨識技術）、統計方法、曲線比對和進階分析
+        %li 暴力解（嘗試所有可能） - 如果鑰匙的可能性足夠低，暴力破解會是最有效率的方法
+      %p 這個演講介紹一些破解圖片式 CAPTCHA 的方法，包含現場示範 、圖表分析、服務商如何應對及修補弱點，以及這些修補後又是如何被再一次破解。
+    .en
+      %p CAPTCHA is one the ways to protect website from attacks or abnormal requests, however, it is hard to strick a balance among security, functionality and easy-of-use. Image CAPTCHA is different from traditional text-based CAPTCHA which sacrifies some level of security while significantly increase the user experience by simply picking the right image. It looks secure to most users and difficult to bots when dealing and handling with a whole series of images, in fact, it's not, at least not for long. Similar to lock picking in real world, there are a few way to think about breaking image CAPTCHA,
+      %ol
+        %li bypass ( don't face the lock directly) - by use of alternative forms or injection,
+        %li skill ( emulate keys or process of lock picking) -  by use of OCR, statistic, curve-fitting and advanced analytic
+        %li brute force ( by trying all possible combinations) - if key space is sufficiently low, brute force will be the most effective one
+      %p This presentation introduces a few ways to attack on image CAPTCHA, including live demo and chart analysis; how vender response and fixing vulnerabilities, and finally, how those fixes being broken again by new exploits.
+
+
+#day2-i-r0.session-box
+  -#-------------------------------------------
+  .room.r0    R0
+  .title      EMV晶片卡POS裝置的實體與溝通協定分析<br>Protocol and physical analysis of EMV POS devices.
+  .speaker    Andrea Barisani
+  .country    IT
+  .company    oCERT
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p Andrea Barisani是個名聲享譽國際的資訊安全研究者，他也是oCERT的創始者之一。從他擁有第一台Commodore-64開始，他從未停止學習新事物和開發與眾不同的攻擊手法。
+      %p 在超過13年的研究經驗中，他專注於巨型基礎架構的管理及防禦、資安事件鑑識以及軟體安全測試。
+      %p 另外，身為開源資安社群的一員，他亦參與了數個專案、書籍撰寫以及規格的制定。
+      %p Barisani也曾在Black Hat、CanSec West、DEFCON、Hack In The Box、PacSec等各大知名研討會分享TEMPEST攻擊、SatNav hacking、0-day、OS hardening...等議題。
+    .en
+      %p Andrea Barisani is an internationally known security researcher. Since owning his first Commodore-64 he has never stopped studying new technologies, developing unconventional attack vectors and exploring what makes things tick...and break.
+      %p His experiences focus on large-scale infrastructure administration and defense, forensic analysis, penetration testing and software development, with more than 13 years of professional experience in security consulting.
+      %p Being an active member of the international Open Source and security community he contributed to several projects, books and open standards. He is now the founder and coordinator of the oCERT effort, the Open Source Computer Security Incident Response Team.
+      %p He has been a speaker and trainer at BlackHat, CanSecWest, DEFCON, Hack In The Box, PacSec conferences among many others, speaking about TEMPEST attacks, SatNav hacking, 0-days, OS hardening and many other topics.
+  -# 議程說明
+  .session-note
+    .zh
+      %p EMV (Europay、MasterCard、Visa)電子付費全球標準被廣泛使用於晶片金融卡、晶片信用卡、銷售點裝置、ATM之間的聯合運作。
+      %p 我們探索截錄甚至複製銷售點系統的可能性，並且詳細分析 EMV 系統使用 PIN 碼保護的缺失。另外，我們也將展示截錄裝置的原型，它將可以被用來讀取任何種類的信用卡和 PIN 碼。
+      %p 我們更新的研究也將深度探究現今廣泛用於銷售點終端機的防篡改感應器的設計、實做和有效性，展示多種繞過和實體攻擊的方法。
+    .en
+      %p The EMV (Europay, MasterCard and Visa) global standard for electronic payments is widely used for inter-operation between chip equipped credit/debit cards, Point of Sales devices and ATMs.
+      %p We explore the feasibility of skimming and cloning in the context of EMV POS usage and analyze in detail EMV flaws in PIN protection. Additionally we illustrate skimming prototypes that can be covertly used to harvest credit card information as well as PIN numbers regardless the type/configuration of the card.
+      %p Our updated research also explores in depth the design, implementation and effectiveness of tamper proof sensors in modern and widely used POS terminals, illustrating different techniques for bypass and physical compromise.
+
+
+#day2-i-r1.session-box
+  -#-------------------------------------------
+  .room.r1    R1
+  .title      瀏覽器和本地域<br>Browser and Local Zone
+  .speaker    于暘 TombKeeper
+  .country    CN
+  .company    NSFOCUS
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p 綠盟科技研究院安全研究部高級研究員，從事資訊安全研究工作超過十年。目前研究方向主要集中在安全性漏洞、APT防禦、無線安全等領域。曾發現並報告了Microsoft、Cisco等公司產品的很多安全性漏洞。在XCon、CanSecWest等安全會議上作過關于無線安全、RootKit檢測、安全性漏洞等主題的演講。
+    .en
+      %p tombkeeper is the core member of China's local hacker group Xfocus, he also works as senior researcher at nsfocus. His expertise lies on Windows operating system's exploits.
+  -# 議程說明
+  .session-note
+    .zh
+      %p 類似XSS、CSRF等瀏覽器的跨域問題一直是近些年的熱點話題，但多數討論都圍繞Internet展開。在這個議題中，主要和大家探討瀏覽器在處理本地域（即硬碟上的檔）時的安全問題。例如竊取硬盤檔；追蹤用戶而不借助任何形式的Cookie，並且在更換瀏覽器，甚至更換電腦後仍可能追蹤；探測是否安裝了某些安全軟件以輔助實施其它攻擊；在某些情況下幫助繞過ASLR等。
+    .en
+      %p N/A
+
+
+#day2-i-r2.session-box
+  -#-------------------------------------------
+  .room.r2    R2
+  .title      Android Hooking Attack
+  .speaker    Minpyo Hong / Secret &amp; Dongcheol Hong / hinehong
+  .country    KR
+  .company    SEWorks
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p 沒有介紹
+    .en
+      %p N/A
+  -# 議程說明
+  .session-note
+    .zh
+      %p 沒有介紹
+    .en
+      %p N/A
+
+
+#day2-j-r0.session-box
+  -#-------------------------------------------
+  .room.r0    R0
+  .title      以開源軟體進行GSM安全研究<br>GSM Security Research using Open Soruce Tools
+  .speaker    Harald Welte
+  .country    DE
+  .company    Osmocom
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p Harald Welte 以他過去作為 Linux kernel packet filter netfilter/iptables 的維護者聞名，也是 gpl-violations.org 的創辦人，致力於維護 GNU GPL 的法律效益；並且在 Android 與 iPhone 誕生以前就試圖開發以 Linux 為基礎的智慧型手機系統(Openmoko)。除此之外，他在安全領域中也有研究，例如 2010 曾破解悠遊卡系統。
+      %p 而最近幾年，他轉向研究通訊協定。以 GSM 與 GPRS 的協議層作為出發點，研究計劃如 OpenBSC、OsmocomBB、OsmoSGSN、OsmoBST等等，成為了 Osmocom.org Communiity 的基石。
+      %p Harald 獲頒 2007 FSF Award for the Advancement of Free Software 與 2008 Google-O'Reilly Open Source Award。
+      %p 他是 Sysmocom - systems for mobile communications GmbH 兩位創辦人中的其中一位，之後便以自由職業者的身份繼續他工作。
+      %p 2008 年，他亦被委任為VIA威盛電子對Open Source的對話窗口。
+    .en
+      %p Harald Welte is most known for his past role as maintainer of the Linux kernel packet filter netfilter/iptables, his pioneering role in enforcing the GNU GPL as founder of gpl-violations.org and his attempt at developing a Linux based smartphone (Openmoko) before Android or the iPhone even existed.  Among other things he also performs security research, such as breaking the EasyCard payment system in 2010.
+      %p In recent years he has turned towards communications protocols: He started with protocol stacks for GSM and GPRS with projects like OpenBSC, OsmocomBB, OsmoSGSN, OsmoBTS and others, which became the building bricks of the Osmocom.org community.
+      %p Harald holds the 2007 FSF Award for the Advancement of Free Software and the 2008 Google-O'Reilly Open Soruce Award.
+      %p He is one of the two founders of Berlin-based provider of small GSM cells "sysmocom - systems for mobile communications GmbH" and continues to work as a freelancer next to that.
+      %p In 2008, he is also appointed as VIA's open source liaison.
+  -# 議程說明
+  .session-note
+    .zh
+      %p 在 GSM 技術問世後的20年內，資安研究人員並沒有很多的工具可以使用。就連 GSM 網路協定的部分實做都沒有，不管是開源或是專有軟體。以位元等級存取電話、基地臺無線通訊界面的低階收發器也不存在。
+      %p 在過去4年間，OsmcoomBB, OpenBSC, OpenBTS, OsmoBTS, OsmoPCU, OsmoNITB, OsmoSGSN, SIMtrace 以及其他許多計劃造成了重大的改變，這些計劃鼓舞了安全社群更深入的探索GSM，最廣泛被使用的行動電話系統，的各個層面。
+      %p 這個演講將會概論性的介紹現今能夠取得的各種工具和應用程式。
+    .en
+      %p For the first two decades of GSM, not many tools had been available for security researchers.  Not even partial implementations of some of the many protocols for the various interfaces in the GSM network had been available, neither proprietary nor in open source form.  No low-level transceivers giving bit-level access to the telephone or base station side of the air interface had been available.
+      %p In the last four years, projects like OsmcoomBB, OpenBSC, OpenBTS, OsmoBTS, OsmoPCU, OsmoNITB, OsmoSGSN, SIMtrace and many others have resulted in a complete paradigm shift, and they have encouraged the security community to look deeper into all aspects of security of the most wide-spread mobile telephony system.
+      %p This talk provides an overview on the tools and applications that are available today for researchers interested in this topic.
+
+
+#day2-j-r1.session-box
+  -#-------------------------------------------
+  .room.r1    R1
+  .title      Exploiting JRE — JRE安全机制与漏洞挖掘研究
+  .speaker    李驍 &amp; 聶森
+  .country    CN
+  .company    上海交大
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p 李驍：曾就職于上海向臻網絡科技有限公司，從事助理安全研究員一職。主要研究領域為程式分析與漏洞挖掘。主攻JRE漏洞挖掘及其利用與防禦技術與。曾發現數個JRE安全漏洞，曾在2013 OWASP中國安全峰會上講演。
+      %p 聶森：曾就職于上海向臻網絡科技有限公司，從事助理安全研究員一職。主要從事程式分析、漏洞挖掘與分析等研究工作。具有多年Windows內核安全研究經驗，目前最大的興趣是利用程式分析的各種手段（如符號執行等），自動化地檢測大型商業級軟體中的安全漏洞。
+    .en
+      %p Xiao lee: He had been an assistant security researcher in XiangZhen Enter. The major research areas are program analysis and vulnerabilities digging. He is expert in using JRE to find vulnerabilities and detect methods. He had reported many vulnerabilities in JRE. He had given a talk in OWASP-China 2013.
+      %p SenNie: He had been an assistant security researcher in XiangZhen Enter. The major research areas are program analysis and vulnerabilities digging. He has many years of experience in Windows kernel security. He is interested in using many methods of program analysis to find vulnerabilities in the commercial software automatically.
+  -# 議程說明
+  .session-note
+    .zh
+      %p 近年來，利用Java Applet作為attack surface的網路攻擊事件越來越多。而由於Applet運行與用戶本地JRE環境中，故其安全問題被世界各國安全研究人員所廣泛關注。本議題着眼於JRE安全機制與漏洞挖掘研究，通過深入剖析Java安全機制的主要構成及特點，結合現有JRE漏洞，分析并研究幾個具備代表性的JRE漏洞，并提出針對不同類型JRE漏洞的漏洞挖掘方法。根據該方法，最終發現了數個Mac OS X與Windows下JRE的安全漏洞，同時在文中給出了分析。最後，分別從攻擊者與防禦者的角度，提出一些JRE漏洞的利用與防禦手段。
+    .en
+      %p N/A
+
+
+#day2-j-r2.session-box
+  -#-------------------------------------------
+  .room.r2    R2
+  .title      靜態與動態智慧型漏洞文件分析系統<br>Static Analysis and Dynamic Instrumentation for Intelligent Exploit Analysis
+  .speaker    Rahul Sasi
+  .country    IN
+  .company    Garage4Hackers
+  / .download   <a href="#">下載投影片</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p 沒有介紹
+    .en
+      %p Rahul Sasi (fb1h2s) is working as a Security Researcher working for a Global Research firm. He has authored multiple security tools, advisories and articles. He has been invited to speak at various security conferences like HITB [KL], BlackHat [US Arsenal], Cocon (2011, 2012), Nullcon (2011, 2012,2013), HITB (AMS 2012,2013), BlackHat (EU 2012), EKoparty (Argentina),CanSecwest(Canada 2013). His work could be found at www.Garage4Hackers.com.
+  -# 議程說明
+  .session-note
+    .zh
+      %p 隨著受到國家支援的APT攻擊政府與私人企業的事件數量逐漸上升，他們對於自動分析弱點及過濾文件檔案格式的需求越來越高。現在有非常多的安全裝置聲稱可以做大部分的攻擊偵測，本次演講將會談到這些系統的缺點以及我們的系統如何彌補這些缺點。這個演講的主旨在於解釋我們加之於我們工具上的智慧，以便讓一般的使用者如政府的員工等可以學習要怎麼使用這些技巧來偵測這些針對他們的APT攻擊。
+      %p 我們已經開始以印度誘捕網路計畫研發一套叫做"Sandy"的免費弱點分析系統。在我的演講中我會傳授使用者們我們在過去八個月來的弱點分析之旅中學習到的多種技巧，其中包含但不侷限於exploit obfuscation, exploit reliability, automated analysis bypass, APT attribution, multi-targeting APT, 和其他任何使得 APT 顯得可畏的攻擊手法。
+    .en
+      %p With the rise in number of state sponsored APT attacks targeting government and private companies, their lies an improved requirement in automated exploit analysis and filtering document file formats. There are a huge no of security devices out there that promises to do most of the detection. Our talk would be on the current drawbacks of these systems and how our automated system handles these drawbacks. The aim of the talk would be to explain the intelligence that we have added on to our tool, so that common users |government employees could learn how they could utilize these techniques in detecting these sort of APT attacks targeting them.
+      %p We been working on an exploit analysis system named “Sandy” a free tool developed under Indian Honeynet project. And in my talk I would pass on to the users the various techniques we have learned from my past 8 months of adventures we had with exploit analysis, that involves but not limited to exploit obfuscation, exploit reliability, automated analysis bypass, APT attribution, multi targeting and everything that makes APT attacks scary.
